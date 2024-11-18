@@ -1,10 +1,10 @@
-import os
 import pickle
-from pathlib import Path
 from multiprocessing import Pool
-from tqdm import tqdm
-from PIL import Image
+from pathlib import Path
+
 import numpy as np
+from PIL import Image
+from tqdm import tqdm
 
 
 def FMM_func(vocab_list: list[str], sentence: str) -> list[str]:
@@ -15,7 +15,7 @@ def FMM_func(vocab_list: list[str], sentence: str) -> list[str]:
     :param sentence: 待分词的句子
     :return: 分词后的结果列表
     """
-    max_len = len(max(vocab_list, key=len))  # 词典中最长词的长度
+    max_len = len(max(vocab_list, key = len))  # 词典中最长词的长度
     start = 0
     token_list = []
     while start < len(sentence):
@@ -50,7 +50,7 @@ def process_file(file_path: Path, image_dir: Path, image_suffix: str, vocab: lis
         return empty_dict
 
     # 读取标签文件内容
-    with open(file_path, 'r', encoding='utf-8') as f:
+    with open(file_path, 'r', encoding = 'utf-8') as f:
         content = f.read()
 
     # 使用 FMM 分词
@@ -61,9 +61,9 @@ def process_file(file_path: Path, image_dir: Path, image_suffix: str, vocab: lis
 
     # 过滤无效标签
     if (
-        any(token not in vocab for token in token_list if token.strip())
-        or "error mathpix" in content
-        or len(new_content.splitlines()) > 1
+            any(token not in vocab for token in token_list if token.strip())
+            or "error mathpix" in content
+            or len(new_content.splitlines()) > 1
     ):
         return empty_dict
 
@@ -85,7 +85,7 @@ def process_labels(input_label_dir: Path, output_dir: Path, image_dir: Path, voc
     :param vocab_file: 词汇表文件路径
     """
     # 创建输出目录
-    output_dir.mkdir(parents=True, exist_ok=True)
+    output_dir.mkdir(parents = True, exist_ok = True)
 
     # 获取标签文件列表
     label_file_list = list(input_label_dir.iterdir())
@@ -94,7 +94,7 @@ def process_labels(input_label_dir: Path, output_dir: Path, image_dir: Path, voc
     image_suffix = next(image_dir.iterdir()).suffix
 
     # 读取词汇表
-    with open(vocab_file, 'r', encoding='utf-8') as f:
+    with open(vocab_file, 'r', encoding = 'utf-8') as f:
         vocab = f.read().split()
 
     dict_list_final = []
@@ -106,10 +106,10 @@ def process_labels(input_label_dir: Path, output_dir: Path, image_dir: Path, voc
         dict_list = pool.imap_unordered(
             lambda file_path: process_file(file_path, image_dir, image_suffix, vocab),
             label_file_list,
-            chunksize=10,
+            chunksize = 10,
         )
 
-        for label_image_dictionary in tqdm(dict_list, total=len(label_file_list)):
+        for label_image_dictionary in tqdm(dict_list, total = len(label_file_list)):
             counter_total += 1
             if label_image_dictionary["label"]:
                 dict_list_final.append(label_image_dictionary)
