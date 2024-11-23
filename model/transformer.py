@@ -18,8 +18,14 @@ class model_transformer(Basic_Model):
 
 
         # figure encoder decoder
-        self.encoder = nn.Linear(1, 1) # todo
-        self.decoder = nn.Linear(1, 1) # todo
+        # Encoder 和 Decoder初步
+        self.encoder = CNN_Encoder(feature_dim=512)  # 假设 CNN 输出特征维度为 512
+        self.decoder = RNN_Decoder(
+            feature_dim=512,
+            embed_dim=256,
+            hidden_dim=512,
+            vocab_size=tokenizer.vocab_size
+        )
 
         # figure optimizer
 
@@ -78,3 +84,41 @@ class model_transformer(Basic_Model):
         return {'Total': total_num, 'Trainable': trainable_num}
 
 
+# 定义 CNN Encoder
+class CNN_Encoder(nn.Module):
+    def __init__(self, feature_dim):
+        super(CNN_Encoder, self).__init__()
+        self.cnn = nn.Sequential(
+            nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1),
+            nn.BatchNorm2d(64),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2, stride=2),
+            nn.Conv2d(64, feature_dim, kernel_size=3, stride=1, padding=1),
+            nn.BatchNorm2d(feature_dim),
+            nn.ReLU()
+        )
+
+    def forward(self, images):
+        # 输入：图像 (batch_size, 3, height, width)
+        features = self.cnn(images)  # 输出特征 (batch_size, feature_dim, h, w)
+        return features
+
+
+# 定义 RNN Decoder
+class RNN_Decoder(nn.Module):
+    def __init__(self, feature_dim, embed_dim, hidden_dim, vocab_size):
+        super(RNN_Decoder, self).__init__()
+        self.embedding = nn.Embedding(vocab_size, embed_dim)
+        self.rnn = nn.LSTM(embed_dim, hidden_dim, batch_first=True)
+        self.fc = nn.Linear(hidden_dim, vocab_size)
+
+    def forward(self, features, captions, lengths):
+        # Embedding
+        embeddings = self.embedding(captions)  # (batch_size, max_length, embed_dim)
+
+        # RNN 输入：拼接 CNN 特征和 Embedding
+        inputs = torch.cat((features.unsqueeze(1), embeddings), dim=1)
+        packed_inputs = pack_padded_sequence(inputs, lengths, batch_first=True, enforce_sorted=False)
+        packed_outputs, _ = self.rnn(packed_inputs)  # RNN 输出
+        outputs = self.fc(packed_outputs.data)  # 全连接层输出词分布
+        return outputs
