@@ -1,3 +1,4 @@
+import os
 import pickle
 from multiprocessing import Pool
 from pathlib import Path
@@ -5,6 +6,25 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 from tqdm import tqdm
+
+# 设置路径变量
+input_label_dir = Path('Datasets/labels')
+image_dir = Path('Datasets/images')
+output_dir = Path('MyDataset/')
+vocab_file = Path('vocab.txt')
+
+# 创建输出目录
+output_dir.mkdir(parents = True, exist_ok = True)
+
+# 获取标签文件列表
+label_file_list = os.listdir(input_label_dir)
+
+# 自动获取图像后缀
+image_suffix = next(image_dir.iterdir()).suffix
+
+# 读取词汇表
+with open(vocab_file, 'r', encoding = 'utf-8') as f:
+    vocab = f.read().split()
 
 
 def FMM_func(vocab_list: list[str], sentence: str) -> list[str]:
@@ -30,7 +50,7 @@ def FMM_func(vocab_list: list[str], sentence: str) -> list[str]:
     return token_list
 
 
-def process_file(file_path: Path, image_dir: Path, image_suffix: str, vocab: list[str]) -> dict:
+def process_file(file_name) -> dict:
     """
     处理单个标签文件
 
@@ -40,7 +60,8 @@ def process_file(file_path: Path, image_dir: Path, image_suffix: str, vocab: lis
     :param vocab: 词汇表
     :return: 包含标签和图片信息的字典
     """
-    ID = file_path.stem  # 文件名（去除后缀）
+
+    ID = os.path.splitext(file_name)[0]  # 文件名（去除后缀）
 
     empty_dict = {"ID": ID, "label": ""}
 
@@ -50,7 +71,7 @@ def process_file(file_path: Path, image_dir: Path, image_suffix: str, vocab: lis
         return empty_dict
 
     # 读取标签文件内容
-    with open(file_path, 'r', encoding = 'utf-8') as f:
+    with open(input_label_dir / file_name, 'r', encoding = 'utf-8') as f:
         content = f.read()
 
     # 使用 FMM 分词
@@ -75,7 +96,7 @@ def process_file(file_path: Path, image_dir: Path, image_suffix: str, vocab: lis
     }
 
 
-def process_labels(input_label_dir: Path, output_dir: Path, image_dir: Path, vocab_file: Path):
+def process_labels():
     """
     主函数，处理所有标签文件并保存结果
 
@@ -84,34 +105,20 @@ def process_labels(input_label_dir: Path, output_dir: Path, image_dir: Path, voc
     :param image_dir: 图像文件目录
     :param vocab_file: 词汇表文件路径
     """
-    # 创建输出目录
-    output_dir.mkdir(parents = True, exist_ok = True)
-
-    # 获取标签文件列表
-    label_file_list = list(input_label_dir.iterdir())
-
-    # 自动获取图像后缀
-    image_suffix = next(image_dir.iterdir()).suffix
-
-    # 读取词汇表
-    with open(vocab_file, 'r', encoding = 'utf-8') as f:
-        vocab = f.read().split()
-
-    dict_list_final = []
-    counter_removed = 0
-    counter_total = 0
-    counter_batch = 0
 
     with Pool() as pool:
         dict_list = pool.imap_unordered(
-            lambda file_path: process_file(file_path, image_dir, image_suffix, vocab),
+            process_file,
             label_file_list,
             chunksize = 10,
         )
-
+        dict_list_final = []
+        counter_removed = 0
+        counter_total = 0
+        counter_batch = 0
         for label_image_dictionary in tqdm(dict_list, total = len(label_file_list)):
             counter_total += 1
-            if label_image_dictionary["label"]:
+            if label_image_dictionary["label"] != "":
                 dict_list_final.append(label_image_dictionary)
                 # 每处理 10,000 个标签，写入一次文件
                 if len(dict_list_final) % 10000 == 0:
@@ -144,11 +151,6 @@ def process_labels(input_label_dir: Path, output_dir: Path, image_dir: Path, voc
 
 
 if __name__ == '__main__':
-    # 设置路径变量
-    input_label_dir = Path('./data_process/original_dataset/labels')
-    image_dir = Path('./data_process/original_dataset/images')
-    output_dir = Path('./datasets//MyDataset')
-    vocab_file = Path('./data_process/vocab.txt')
 
     # 调用主函数
-    process_labels(input_label_dir, output_dir, image_dir, vocab_file)
+    process_labels()
