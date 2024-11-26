@@ -2,9 +2,12 @@ import os
 import pickle
 import sys
 import time
-
-from torch.utils.data import random_split,Dataset, DataLoader
+from PIL import Image
+from torch.utils.data import random_split, Dataset, DataLoader
 import torch
+import torchvision.transforms as transforms
+from gensim.models import Word2Vec
+from tokenizer import Tokenizer
 
 
 class PKLDataset(Dataset):
@@ -30,19 +33,22 @@ class PKLDataset(Dataset):
         Returns:
             dict: 包含图像和标签的数据。
         """
-        file_path = self.file_list[idx]
-        with open(file_path, 'rb') as f:
-            data = pickle.load(f)
 
-        # 假设数据包含 'image' 和 'label' 两部分
-        image = data['image']
-        label = data['label']
+        img_id = self.all_data[idx]['ID']
+        img_path = os.path.join(self.img_folder, f'{img_id}.png')
+        img = Image.open(img_path).convert('RGB')
 
-        if self.transform:
-            image = self.transform(image)
+        # Apply transformations if provided
+        if self.transform is not None:
+            img = self.transform(img)
 
-        return {"image": torch.tensor(image, dtype = torch.float32),
-                "label": torch.tensor(label, dtype = torch.long)}
+        label = self.all_data[idx]['label']
+
+        # 给 label 加标记
+        label = '<start>' + ' ' + label + ' ' + '<end>'
+        label_length = len(label.split())
+
+        return img, label, label_length
 
     def __load_pkl(self):
         pkl_files = os.listdir(self.pkl_file)
@@ -57,8 +63,18 @@ class PKLDataset(Dataset):
         print(f"读取时间 {T1 - T0} s")
         return all_data
 
+    def build_vocab(self):
+        captions = ['<start> ' + data['label'] + ' <end>' for data in self.all_data]
 
-def create_dataloader(directory, batch_size=32, shuffle=True, num_workers=0, transform=None):
+        tokenized_captions = [caption.split() for caption in captions]
+        self.max_length = max([len(caption) for caption in tokenized_captions])
+
+        vocab = Word2Vec(tokenized_captions, vector_size = 100, window = 5, min_count = 1, workers = 4, seed = 42)
+
+        return vocab
+
+
+def create_dataloader(directory, batch_size = 32, shuffle = True, num_workers = 0, transform = None):
     """
     Args:
         directory (str): 数据集目录路径。
@@ -69,23 +85,27 @@ def create_dataloader(directory, batch_size=32, shuffle=True, num_workers=0, tra
     Returns:
         DataLoader: 数据加载器。
     """
-    dataset = PKLDataset(directory, transform=transform)
-    dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=shuffle, num_workers=num_workers)
+    dataset = PKLDataset(directory, transform = transform)
+    dataloader = DataLoader(dataset, batch_size = batch_size, shuffle = shuffle, num_workers = num_workers)
     return dataloader
 
-def create_dataset(pkl_file, train_ratio = 0.9, batch_size = 32):
-    dataset = pkl_file
+def create_dataset(img_dir, pkl_dir, train_ratio = 0.9, batch_size = 32, transform = None):
+    # todo config
+    dataset = PKLDataset(img_folder = img_dir, pkl_file = pkl_dir, transform = transform)
+
+    vocab = dataset.build_vocab()
 
     train_size = int(len(dataset) * train_ratio)
     valid_size = len(dataset) - train_size
-    print(train_size, valid_size)
+
     trainset, validset = random_split(dataset, [train_size, valid_size])
 
     # 创建数据加载器
-    train_loader = DataLoader(trainset, batch_size=batch_size, shuffle=True)
-    valid_loader = DataLoader(validset, batch_size=batch_size, shuffle=False)
+    train_loader = DataLoader(trainset, batch_size = batch_size, shuffle = True)
+    valid_loader = DataLoader(validset, batch_size = batch_size, shuffle = False)
 
-    return train_loader, valid_loader
+    return train_loader, valid_loader, vocab
+
 
 if __name__ == '__main__':
     # pkl_path = "data_process/MyDataset/batch_"
@@ -106,8 +126,21 @@ if __name__ == '__main__':
     '''
     img_folder = "data_process/Datasets/images"
     pkl_dir = "data_process/MyDataset"
-    Mydataloader = PKLDataset(img_folder=img_folder, pkl_file=pkl_dir)
-    print(len(Mydataloader))
-    trainset, validset = create_dataset(Mydataloader)
-    print(len(trainset))
-    print(len(validset))
+
+    transform = transforms.Compose([
+        transforms.Resize((224, 224)),  # Resize image to a fixed size
+        transforms.ToTensor(),  # Convert image to tensor
+        transforms.Normalize(mean = [0.485, 0.456, 0.406], std = [0.229, 0.224, 0.225])  # Normalize image
+    ])
+
+    train_loader, valid_loader, vocab = create_dataset(img_folder, pkl_dir, transform = transform)
+    tokenizer = Tokenizer(vocab)
+    for data in train_loader:
+        (imgs, caps, caplens) = data
+        encoded_caps, target_idxs = tokenizer.encode(caps)
+
+        encoded_caps = torch.FloatTensor(encoded_caps)
+        target_idxs = torch.tensor(target_idxs, dtype = torch.long)
+        text = tokenizer.decode(target_idxs)
+        print(text)
+
