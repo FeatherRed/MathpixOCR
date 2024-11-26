@@ -2,6 +2,7 @@ import os
 import pickle
 import sys
 import time
+import random
 from PIL import Image
 from torch.utils.data import random_split, Dataset, DataLoader
 import torch
@@ -11,17 +12,23 @@ from tokenizer import Tokenizer
 
 
 class PKLDataset(Dataset):
-    def __init__(self, img_folder, pkl_file, transform = None):
+    def __init__(self, img_folder=None, pkl_file=None, transform=None, para=1, all_data=None):#两种构造方式
         """
         Args:
             pkl_file (str): 存储 .pkl 文件的目录路径。
             transform (callable, optional): 用于处理数据的转换函数。
         """
-        self.img_folder = img_folder
-        self.pkl_file = pkl_file
-        self.transform = transform
-        # self.file_list = [os.path.join(pkl_file, f) for f in os.listdir(pkl_file) if f.endswith('.pkl')]
-        self.all_data = self.__load_pkl()
+        if para==1 :
+            self.img_folder = img_folder
+            self.pkl_file = pkl_file
+            self.transform = transform
+            # self.file_list = [os.path.join(pkl_file, f) for f in os.listdir(pkl_file) if f.endswith('.pkl')]
+            self.all_data = self.__load_pkl()
+        else:
+            self.img_folder = img_folder
+            self.pkl_file = pkl_file
+            self.transform = transform
+            self.all_data = all_data
 
     def __len__(self):
         return len(self.all_data)
@@ -89,17 +96,34 @@ def create_dataloader(directory, batch_size = 32, shuffle = True, num_workers = 
     dataloader = DataLoader(dataset, batch_size = batch_size, shuffle = shuffle, num_workers = num_workers)
     return dataloader
 
+def split_list(data, train_ratio=0.9, seed=None):
+    if seed is not None:
+        random.seed(seed)
+
+    shuffled_data = data.copy()
+    random.shuffle(shuffled_data)
+
+    train_size = int(len(shuffled_data) * train_ratio)
+    train_data = shuffled_data[:train_size]
+    valid_data = shuffled_data[train_size:]
+
+    return train_data, valid_data
+
 def create_dataset(img_dir, pkl_dir, train_ratio = 0.9, batch_size = 32, transform = None):
     # todo config
-    dataset = PKLDataset(img_folder = img_dir, pkl_file = pkl_dir, transform = transform)
+    all_data = []
+    pkl_files = os.listdir(pkl_dir)
+    for file_name in pkl_files:
+        batch_file = os.path.join(pkl_dir, file_name)
+        with open(batch_file, 'rb') as f:
+            data = pickle.load(f)
+            all_data.extend(data)
+    #dataset = PKLDataset(img_folder = img_dir, pkl_file = pkl_dir, transform = transform)
 
-    vocab = dataset.build_vocab()
-
-    train_size = int(len(dataset) * train_ratio)
-    valid_size = len(dataset) - train_size
-
-    trainset, validset = random_split(dataset, [train_size, valid_size])
-
+    trainlist, validlist = split_list(all_data, train_ratio=train_ratio, seed=42)
+    trainset = PKLDataset(img_folder=img_dir, transform=transform, para=0, all_data=trainlist)
+    validset = PKLDataset(img_folder=img_dir, transform=transform, para=0, all_data=validlist)
+    vocab = trainset.build_vocab()
     # 创建数据加载器
     train_loader = DataLoader(trainset, batch_size = batch_size, shuffle = True)
     valid_loader = DataLoader(validset, batch_size = batch_size, shuffle = False)
