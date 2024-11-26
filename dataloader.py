@@ -3,7 +3,7 @@ import pickle
 import sys
 import time
 
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import random_split,Dataset, DataLoader
 import torch
 
 
@@ -58,7 +58,7 @@ class PKLDataset(Dataset):
         return all_data
 
 
-def create_dataloader(directory, batch_size = 32, shuffle = True, num_workers = 0, transform = None):
+def create_dataloader(directory, batch_size=32, shuffle=True, num_workers=0, transform=None):
     """
     Args:
         directory (str): 数据集目录路径。
@@ -69,10 +69,23 @@ def create_dataloader(directory, batch_size = 32, shuffle = True, num_workers = 
     Returns:
         DataLoader: 数据加载器。
     """
-    dataset = PKLDataset(directory, transform = transform)
-    dataloader = DataLoader(dataset, batch_size = batch_size, shuffle = shuffle, num_workers = num_workers)
+    dataset = PKLDataset(directory, transform=transform)
+    dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=shuffle, num_workers=num_workers)
     return dataloader
 
+def create_dataset(pkl_file, train_ratio = 0.9, batch_size = 32):
+    dataset = pkl_file
+
+    train_size = int(len(dataset) * train_ratio)
+    valid_size = len(dataset) - train_size
+    print(train_size, valid_size)
+    trainset, validset = random_split(dataset, [train_size, valid_size])
+
+    # 创建数据加载器
+    train_loader = DataLoader(trainset, batch_size=batch_size, shuffle=True)
+    valid_loader = DataLoader(validset, batch_size=batch_size, shuffle=False)
+
+    return train_loader, valid_loader
 
 if __name__ == '__main__':
     # pkl_path = "data_process/MyDataset/batch_"
@@ -91,7 +104,10 @@ if __name__ == '__main__':
     data -> [list]
     
     '''
-
+    img_folder = "data_process/Datasets/images"
     pkl_dir = "data_process/MyDataset"
-    Mydataloader = PKLDataset(pkl_dir)
+    Mydataloader = PKLDataset(img_folder=img_folder, pkl_file=pkl_dir)
     print(len(Mydataloader))
+    trainset, validset = create_dataset(Mydataloader)
+    print(len(trainset))
+    print(len(validset))
