@@ -1,3 +1,5 @@
+import math
+
 import torch
 import numpy as np
 import time
@@ -6,7 +8,7 @@ import torch.nn as nn
 from torch.nn.utils.rnn import pack_padded_sequence
 from utils import clip_grad_norms
 from model.basic_model import Basic_Model
-
+from model.nets import Encoder4transformer as Encoder, Decoder_transformer as Decoder
 class model_transformer(Basic_Model):
     def __init__(self, config, tokenizer):
         super(model_transformer, self).__init__(config, tokenizer)
@@ -19,13 +21,16 @@ class model_transformer(Basic_Model):
 
         # figure encoder decoder
         # Encoder 和 Decoder初步
-        self.encoder = CNN_Encoder(feature_dim=512)  # 假设 CNN 输出特征维度为 512
-        self.decoder = RNN_Decoder(
-            feature_dim=512,
-            embed_dim=256,
-            hidden_dim=512,
-            vocab_size=tokenizer.vocab_size
-        )
+        # self.encoder = CNN_Encoder(feature_dim=512)  # 假设 CNN 输出特征维度为 512
+        # self.decoder = RNN_Decoder(
+        #     feature_dim=512,
+        #     embed_dim=256,
+        #     hidden_dim=512,
+        #     vocab_size=tokenizer.vocab_size
+        # )
+
+        self.encoder = Encoder()
+        self.decoder = Decoder(tokenizer, config)
 
         # figure optimizer
 
@@ -40,23 +45,36 @@ class model_transformer(Basic_Model):
         # figure out criterion
         self.criterion = nn.CrossEntropyLoss().to(self.config.device)
 
+
+        # move to device
+        device = self.config.device
+        self.encoder = self.encoder.to(device)
+        self.decoder = self.decoder.to(device)
+        for state in self.optimizer.state.values():
+            for k, v in state.items():
+                if torch.is_tensor(v):
+                    state[k] = v.to(device)
+
     def train_batch(self, image, caption, length):
+        self.decoder.train()
+        self.encoder.train()
 
         device = self.device
         image = image.to(device)
-        encoded_caption, origin_idxs = self.tokenizer.encoder(caption)
+        encoded_caption, target_idxs = self.tokenizer.encode(caption)
 
         encoded_caption = torch.FloatTensor(encoded_caption).to(device)
-
+        target_idxs = torch.tensor(target_idxs, dtype = torch.long).to(device)
+        length = length.to(device)
         encoded_image = self.encoder(image)
 
         # 解码
         scores, decoded_caption, decoded_length, sort_idx = self.decoder(encoded_image, encoded_caption, length)
 
-        target_idxs = origin_idxs[sort_idx][:, 1:]
+        targets = target_idxs[sort_idx][:, 1:]
 
         scores = pack_padded_sequence(scores, decoded_length.cpu(), batch_first = True).data
-        targets = pack_padded_sequence(target_idxs, decoded_length.cpu(), batch_first = True).data
+        targets = pack_padded_sequence(targets, decoded_length.cpu(), batch_first = True).data.squeeze()
 
         assert not torch.any(torch.isnan(scores)), "Nan happen in scores!!"
         assert not torch.any(torch.isnan(targets)), "Nan happen in targets!!"
@@ -122,3 +140,9 @@ class RNN_Decoder(nn.Module):
         packed_outputs, _ = self.rnn(packed_inputs)  # RNN 输出
         outputs = self.fc(packed_outputs.data)  # 全连接层输出词分布
         return outputs
+
+    def generate(self, encoder_out, temperature = 0, top_p = 1):
+        bs = encoder_out.shape[0]
+        device = encoder_out.device
+
+        pass
