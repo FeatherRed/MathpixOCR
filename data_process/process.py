@@ -8,9 +8,9 @@ from PIL import Image
 from tqdm import tqdm
 
 # 设置路径变量
-input_label_dir = Path('Datasets/labels')
-image_dir = Path('Datasets/images')
-output_dir = Path('MyDataset/')
+input_label_dir = Path('E:/Desktop/github/MathpixOCR/datasets/train/labels')
+image_dir = Path('E:/Desktop/github/MathpixOCR/datasets/train/images')
+output_dir = Path('E:/Desktop/github/MathpixOCR/datasets/train/pkls')
 vocab_file = Path('vocab.txt')
 
 # 创建输出目录

@@ -12,23 +12,15 @@ from tokenizer import Tokenizer
 
 
 class PKLDataset(Dataset):
-    def __init__(self, img_folder=None, pkl_file=None, transform=None, para=1, all_data=None):#两种构造方式
+    def __init__(self, img_folder = None, all_data = None, transform = None):  # 两种构造方式
         """
         Args:
             pkl_file (str): 存储 .pkl 文件的目录路径。
             transform (callable, optional): 用于处理数据的转换函数。
         """
-        if para==1 :
-            self.img_folder = img_folder
-            self.pkl_file = pkl_file
-            self.transform = transform
-            # self.file_list = [os.path.join(pkl_file, f) for f in os.listdir(pkl_file) if f.endswith('.pkl')]
-            self.all_data = self.__load_pkl()
-        else:
-            self.img_folder = img_folder
-            self.pkl_file = pkl_file
-            self.transform = transform
-            self.all_data = all_data
+        self.img_folder = img_folder
+        self.transform = transform
+        self.all_data = all_data
 
     def __len__(self):
         return len(self.all_data)
@@ -57,18 +49,18 @@ class PKLDataset(Dataset):
 
         return img, label, label_length
 
-    def __load_pkl(self):
-        pkl_files = os.listdir(self.pkl_file)
-        all_data = []
-        T0 = time.perf_counter()
-        for file_name in pkl_files:
-            batch_file = os.path.join(self.pkl_file, file_name)
-            with open(batch_file, 'rb') as f:
-                data = pickle.load(f)
-                all_data.extend(data)
-        T1 = time.perf_counter()
-        print(f"读取时间 {T1 - T0} s")
-        return all_data
+    # def __load_pkl(self):
+    #     pkl_files = os.listdir(self.pkl_file)
+    #     all_data = []
+    #     T0 = time.perf_counter()
+    #     for file_name in pkl_files:
+    #         batch_file = os.path.join(self.pkl_file, file_name)
+    #         with open(batch_file, 'rb') as f:
+    #             data = pickle.load(f)
+    #             all_data.extend(data)
+    #     T1 = time.perf_counter()
+    #     print(f"读取时间 {T1 - T0} s")
+    #     return all_data
 
     def build_vocab(self):
         captions = ['<start> ' + data['label'] + ' <end>' for data in self.all_data]
@@ -80,23 +72,42 @@ class PKLDataset(Dataset):
 
         return vocab
 
+# only image
+class TestDataset(Dataset):
+    def __init__(self, img_folder, ids, transform = None):
+        self.img_folder = img_folder
+        self.ids = ids
+        self.transform = transform
 
-def create_dataloader(directory, batch_size = 32, shuffle = True, num_workers = 0, transform = None):
-    """
-    Args:
-        directory (str): 数据集目录路径。
-        batch_size (int): 批量大小。
-        shuffle (bool): 是否随机打乱数据。
-        num_workers (int): 使用的子进程数。
-        transform (callable, optional): 数据预处理函数。
-    Returns:
-        DataLoader: 数据加载器。
-    """
-    dataset = PKLDataset(directory, transform = transform)
-    dataloader = DataLoader(dataset, batch_size = batch_size, shuffle = shuffle, num_workers = num_workers)
-    return dataloader
+    def __len__(self):
+        return len(self.ids)
 
-def split_list(data, train_ratio=0.9, seed=None):
+    def __getitem__(self, index):
+        img_id = self.ids[index]
+        img_path = os.path.join(self.img_folder, f"{img_id}.png")
+        img = Image.open(img_path).convert('RGB')
+
+        if self.transform is not None:
+            img = self.transform(img)
+
+        return img_id, img
+
+# def create_dataloader(directory, batch_size = 32, shuffle = True, num_workers = 0, transform = None):
+#     """
+#     Args:
+#         directory (str): 数据集目录路径。
+#         batch_size (int): 批量大小。
+#         shuffle (bool): 是否随机打乱数据。
+#         num_workers (int): 使用的子进程数。
+#         transform (callable, optional): 数据预处理函数。
+#     Returns:
+#         DataLoader: 数据加载器。
+#     """
+#     dataset = PKLDataset(directory, transform = transform)
+#     dataloader = DataLoader(dataset, batch_size = batch_size, shuffle = shuffle, num_workers = num_workers)
+#     return dataloader
+
+def split_list(data, train_ratio = 0.9, seed = None):
     if seed is not None:
         random.seed(seed)
 
@@ -109,62 +120,59 @@ def split_list(data, train_ratio=0.9, seed=None):
 
     return train_data, valid_data
 
-def create_dataset(img_dir, pkl_dir, train_ratio = 0.9, batch_size = 32, transform = None):
-    # todo config
+
+def load_pkl(pkl_dir):
     all_data = []
     pkl_files = os.listdir(pkl_dir)
+    T0 = time.perf_counter()
     for file_name in pkl_files:
         batch_file = os.path.join(pkl_dir, file_name)
         with open(batch_file, 'rb') as f:
             data = pickle.load(f)
             all_data.extend(data)
-    #dataset = PKLDataset(img_folder = img_dir, pkl_file = pkl_dir, transform = transform)
+    T1 = time.perf_counter()
+    print(f"读取时间 {T1 - T0} s")
+    return all_data
 
-    trainlist, validlist = split_list(all_data, train_ratio=train_ratio, seed=42)
-    trainset = PKLDataset(img_folder=img_dir, transform=transform, para=0, all_data=trainlist)
-    validset = PKLDataset(img_folder=img_dir, transform=transform, para=0, all_data=validlist)
+
+def create_dataloader(img_dir, pkl_dir, train_ratio = 0.9, train_batch_size = 32, valid_batch_size = 1000,
+                      transform = None):
+    # todo config
+    all_data = load_pkl(pkl_dir)
+    # dataset = PKLDataset(img_folder = img_dir, pkl_file = pkl_dir, transform = transform)
+
+    trainlist, validlist = split_list(all_data, train_ratio = train_ratio, seed = 42)
+    trainset = PKLDataset(img_folder = img_dir, transform = transform, all_data = trainlist)
+    validset = PKLDataset(img_folder = img_dir, transform = transform, all_data = validlist)
     vocab = trainset.build_vocab()
     # 创建数据加载器
-    train_loader = DataLoader(trainset, batch_size = batch_size, shuffle = True)
-    valid_loader = DataLoader(validset, batch_size = batch_size, shuffle = False)
+    train_loader = DataLoader(trainset, batch_size = train_batch_size, shuffle = True)
+    valid_loader = DataLoader(validset, batch_size = valid_batch_size, shuffle = False)
 
     return train_loader, valid_loader, vocab
 
+def create_testloader(img_dir, ids, test_batch_size = 1000, transform = None):
+    testset = TestDataset(img_dir, ids, transform)
+    test_loader = DataLoader(testset, batch_size = test_batch_size, shuffle = False)
+    return test_loader
+
 
 if __name__ == '__main__':
-    # pkl_path = "data_process/MyDataset/batch_"
-    # pkls = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    # all_data = []
-    # T0 = time.perf_counter()
-    # for i in pkls:
-    #     with open(pkl_path + str(i) + ".pkl", 'rb') as f:
-    #         data = pickle.load(f)
-    #         all_data = all_data + data
-    # T1 = time.perf_counter()
-    # print((T1 - T0) * 1000)
-    # memory_size = sys.getsizeof(all_data)
-    # print(f"Memory size of data: {memory_size} bytes")
-    '''
-    data -> [list]
-    
-    '''
-    img_folder = "data_process/Datasets/images"
-    pkl_dir = "data_process/MyDataset"
-
+    img_folder = "datasets/train/images"
+    pkl_dir = "datasets/train/pkls"
+    test_img_folder = 'datasets/test/images'
     transform = transforms.Compose([
         transforms.Resize((224, 224)),  # Resize image to a fixed size
         transforms.ToTensor(),  # Convert image to tensor
         transforms.Normalize(mean = [0.485, 0.456, 0.406], std = [0.229, 0.224, 0.225])  # Normalize image
     ])
 
-    train_loader, valid_loader, vocab = create_dataset(img_folder, pkl_dir, transform = transform)
-    tokenizer = Tokenizer(vocab)
-    for data in train_loader:
-        (imgs, caps, caplens) = data
-        encoded_caps, target_idxs = tokenizer.encode(caps)
-
-        encoded_caps = torch.FloatTensor(encoded_caps)
-        target_idxs = torch.tensor(target_idxs, dtype = torch.long)
-        text = tokenizer.decode(target_idxs)
-        print(text)
+    # train_loader, valid_loader, vocab = create_dataloader(img_folder, pkl_dir, transform = transform)
+    # tokenizer = Tokenizer(vocab)
+    test_id = [104011, 105060]
+    ids = [i for i in range(test_id[0], test_id[1] + 1)] # 0 ~ 1049
+    testset = TestDataset(test_img_folder, ids, transform)
+    (id, img) = testset[1049]
+    print(id)
+    print(img.shape)
 
