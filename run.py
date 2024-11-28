@@ -48,8 +48,9 @@ class Config(object):
         self.test_img_dir = "datasets/test/images"  # todo
         self.test_ids = [i for i in range(104011, 105061)]  # 0 ~ 1049
 
-        self.load_path = None  # todo
-
+        self.load_path = 'output/test_20241128T104341/save_model/'  # 'output/test_20241128T104341/save_model/'
+        self.load_model = 'epoch-25.pt' # 'epoch-25.pt'
+        self.load_name = 'test_20241128T104341' # 'test_20241128T104341
         self.max_length = 200
 
 
@@ -68,6 +69,9 @@ def main():
         if not os.path.exists(config.output_dir):
             os.makedirs(config.output_dir)
         tb_logger = SummaryWriter(os.path.join("tensorboard"), config.run_name)
+    else:
+        # only test
+        config.output_dir = config.output_dir + config.load_name + '/'
 
     transform = transforms.Compose([
         transforms.Resize((40, 240)),  # Resize image to a fixed size
@@ -106,16 +110,17 @@ def main():
     else:
         # test
         # load tokenizer
-        with open(config.load_path + '/tokenizer.pkl', 'rb') as f:
+        with open(config.output_dir + 'tokenizer.pkl', 'rb') as f:
             tokenizer = pickle.load(f)
 
         tester = Runner(config = config, tokenizer = tokenizer)
         # load model
-        tester.load(config.load_path)
+        tester.load(config.load_path + config.load_model)
 
         test_dataloader = create_testloader(config.test_img_dir, ids = config.test_ids,
-                                            test_batch_size = config.test_batch_size)
-        tester.test(test_dataloader, './', 1)
+                                            test_batch_size = config.test_batch_size,
+                                            transform = transform)
+        tester.test(test_dataloader, config.output_dir + 'test/', 1) # 1表示 test
 
 
 if __name__ == "__main__":

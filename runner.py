@@ -159,4 +159,4 @@ class Runner(object):
         # 无序号
         with open(output_path + f"test_out-{epoch}.txt", 'w') as f:
             for str in save_list:
-                f.write(str + '\n')
+                f.write(str[8: len(str) - 6] + '\n')
