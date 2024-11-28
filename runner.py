@@ -9,7 +9,7 @@ from torch.nn.utils.rnn import pack_padded_sequence
 from utils import *
 from benchmark import *
 from tensorboardX import SummaryWriter
-from model.transformer import model_transformer
+from model.lstm import model_transformer
 
 def get_parameter_number(model):
     total_num = sum(p.numel() for p in model.parameters())

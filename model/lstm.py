@@ -8,7 +8,7 @@ import torch.nn as nn
 from torch.nn.utils.rnn import pack_padded_sequence
 from utils import clip_grad_norms
 from model.basic_model import Basic_Model
-from model.nets import Encoder4transformer as Encoder, Decoder_transformer as Decoder
+from model.nets import Encoder4lstm as Encoder, Decoder_lstm as Decoder
 class model_transformer(Basic_Model):
     def __init__(self, config, tokenizer):
         super(model_transformer, self).__init__(config, tokenizer)
@@ -21,13 +21,7 @@ class model_transformer(Basic_Model):
 
         # figure encoder decoder
         # Encoder 和 Decoder初步
-        # self.encoder = CNN_Encoder(feature_dim=512)  # 假设 CNN 输出特征维度为 512
-        # self.decoder = RNN_Decoder(
-        #     feature_dim=512,
-        #     embed_dim=256,
-        #     hidden_dim=512,
-        #     vocab_size=tokenizer.vocab_size
-        # )
+
 
         self.encoder = Encoder()
         self.decoder = Decoder(tokenizer, config)

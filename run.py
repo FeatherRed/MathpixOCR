@@ -19,8 +19,8 @@ class Config(object):
         self.run_name = "test"
         self.start_epoch = 0
         self.max_epoch = 100
-        self.lr_max = 1e-4
-        self.lr_min = 1e-5
+        self.lr_max = 1e-3
+        self.lr_min = 1e-4
         self.lr_decay = pow((self.lr_min / self.lr_max), 1 / self.max_epoch)
 
         self.device = torch.device('cuda:0')
@@ -34,7 +34,10 @@ class Config(object):
         self.test_batch_size = 1000
         self.save_interval = 5
         self.log_interval = 30
-
+        self.validate_period = 5
+        self.batch_size = 32
+        self.save_period = 5
+        self.log_period = 30
         self.max_token_length = 50
         self.max_norm = 1.0
         self.seed = 42
@@ -48,9 +51,9 @@ class Config(object):
         self.test_img_dir = "datasets/test/images"  # todo
         self.test_ids = [i for i in range(104011, 105061)]  # 0 ~ 1049
 
-        self.load_path = 'output/test_20241128T104341/save_model/'  # 'output/test_20241128T104341/save_model/'
-        self.load_model = 'epoch-25.pt' # 'epoch-25.pt'
-        self.load_name = 'test_20241128T104341' # 'test_20241128T104341
+        self.load_path = None # 'output/test_20241128T104341/save_model/'
+        self.load_model = None # 'epoch-25.pt'
+        self.load_name = None # 'test_20241128T104341
         self.max_length = 200
 
 
