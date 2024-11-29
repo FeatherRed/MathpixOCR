@@ -20,7 +20,7 @@ class Config(object):
         self.start_epoch = 0
         self.max_epoch = 100
         self.lr_max = 1e-3
-        self.lr_min = 1e-4
+        self.lr_min = 1e-6
         self.lr_decay = pow((self.lr_min / self.lr_max), 1 / self.max_epoch)
 
         self.device = torch.device('cuda:0')
@@ -70,7 +70,7 @@ def main():
         config.output_dir = config.output_dir + config.run_name + '/'
         if not os.path.exists(config.output_dir):
             os.makedirs(config.output_dir)
-        tb_logger = SummaryWriter(os.path.join("tensorboard"), config.run_name)
+        tb_logger = SummaryWriter(os.path.join(f"tensorboard\{config.run_name}"), config.run_name)
     else:
         # only test
         config.output_dir = config.output_dir + config.load_name + '/'
@@ -87,7 +87,8 @@ def main():
                                                                 train_ratio = config.train_ratio,
                                                                 train_batch_size = config.train_batch_size,
                                                                 valid_batch_size = config.valid_batch_size,
-                                                                transform = transform
+                                                                transform = transform,
+                                                                seed = config.split_seed
                                                                 )
         tokenizer = Tokenizer(vocab)
         # 保存 tokenizer

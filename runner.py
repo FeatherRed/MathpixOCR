@@ -143,7 +143,7 @@ class Runner(object):
                 hypos.extend(predicts_string)
         score1, score2, score3, t_score = total_score(refers, hypos)
         eval_loss = np.mean(total_loss)
-        print(f'eval scores: BLEU Score:{score1}, Edit Distance Score:{score2}, Exact Match Score:{score3}')
+        print(f'eval scores: BLEU Score:{score1}, Edit Distance Score:{score2}, Exact Match Score:{score3}, Loss:{eval_loss}')
 
         if tb_logger is not None:
             tb_logger.add_scalar('eval/score1(BLEU)', score1, epoch)
