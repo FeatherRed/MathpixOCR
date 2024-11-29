@@ -52,7 +52,7 @@ class Runner(object):
                 self.learning_step += 1
                 epoch_loss_list.append(bs_loss)
                 self.loss_list.append(bs_loss)
-                acc = exact_match_score(bs_caption, predicts_string)
+                acc = exact_match_score(bs_caption, predicts_string) / 100.0
                 if tb_logger is not None and self.learning_step % self.config.log_interval == 0:
                     tb_logger.add_scalar("train/loss", bs_loss, self.learning_step)
                     tb_logger.add_scalar("train/accuracy", acc, self.learning_step)
@@ -113,7 +113,6 @@ class Runner(object):
 
         refers = []
         hypos = []
-        total_loss = []
         device = self.config.device
         with torch.no_grad():
             for imgs, refer, length in tqdm(dataloader, desc = "Evaluating..."):
@@ -124,33 +123,16 @@ class Runner(object):
 
                 predicts_string = self.tokenizer.decode(predicts)
 
-                # 计算下loss
-                encoded_refer, target_idxs = self.tokenizer.encode(refer)
-                encoded_refer = torch.FloatTensor(encoded_refer).to(device)
-                target_idxs = torch.tensor(target_idxs, dtype = torch.long).to(device)
-                length = length.to(device)
-
-                scores, decoded_refer, decoded_length, sort_idx = self.model.decoder(encoded_imgs, encoded_refer, length)
-                targets = target_idxs[sort_idx][:, 1]
-
-                scores = pack_padded_sequence(scores, decoded_length.cpu(),batch_first = True).data
-                targets = pack_padded_sequence(targets, decoded_length.cpu(), batch_first = True).data.squeeze()
-
-                loss = self.model.criterion(scores, targets.long())
-
-                total_loss.append(loss.detach().cpu())
                 refers.extend(refer)
                 hypos.extend(predicts_string)
         score1, score2, score3, t_score = total_score(refers, hypos)
-        eval_loss = np.mean(total_loss)
-        print(f'eval scores: BLEU Score:{score1}, Edit Distance Score:{score2}, Exact Match Score:{score3}, Loss:{eval_loss}')
+        print(f'eval scores: BLEU Score:{score1}, Edit Distance Score:{score2}, Exact Match Score:{score3}')
 
         if tb_logger is not None:
             tb_logger.add_scalar('eval/score1(BLEU)', score1, epoch)
             tb_logger.add_scalar('eval/score2', score2, epoch)
             tb_logger.add_scalar('eval/score3(Match)', score3, epoch)
             tb_logger.add_scalar('eval/total_score', t_score, epoch)
-            tb_logger.add_scalar('eval/loss', eval_loss, epoch)
 
     def test(self, dataloader, output_path, epoch):
         self.model.encoder.eval()
