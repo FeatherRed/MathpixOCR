@@ -52,8 +52,8 @@ class Runner(object):
                 self.learning_step += 1
                 epoch_loss_list.append(bs_loss)
                 self.loss_list.append(bs_loss)
-                acc = exact_match_score(bs_caption, predicts_string) / 100.0
                 if tb_logger is not None and self.learning_step % self.config.log_interval == 0:
+                    acc = exact_match_score(bs_caption, predicts_string) / 100.0
                     tb_logger.add_scalar("train/loss", bs_loss, self.learning_step)
                     tb_logger.add_scalar("train/accuracy", acc, self.learning_step)
             print(f"Loss of epoch [{epoch}/{max_epoch}] is {np.mean(epoch_loss_list)}, current learning steps:{self.learning_step}")
@@ -83,10 +83,10 @@ class Runner(object):
         if not os.path.exists(save_dir):
             os.makedirs(save_dir)
 
-        # 这里保存的是整个类
-        # 可以选择保存 encoder、decoder、optimizer的状态
-        with open(save_dir + f"epoch-{epoch}.pkl", 'wb') as f:
-            pickle.dump(self.model, f, -1)
+        # # 这里保存的是整个类
+        # # 可以选择保存 encoder、decoder、optimizer的状态
+        # with open(save_dir + f"epoch-{epoch}.pkl", 'wb') as f:
+        #     pickle.dump(self.model, f, -1)
 
         torch.save(
             {

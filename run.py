@@ -41,7 +41,6 @@ class Config(object):
         self.max_token_length = 50
         self.max_norm = 1.0
 
-        self.split_seed = 4037
         self.seed = 42
 
         self.img_dir = "datasets/mini/images"
@@ -88,7 +87,7 @@ def main():
                                                                 train_batch_size = config.train_batch_size,
                                                                 valid_batch_size = config.valid_batch_size,
                                                                 transform = transform,
-                                                                seed = config.split_seed
+                                                                seed = 42
                                                                 )
         tokenizer = Tokenizer(vocab)
         # 保存 tokenizer
