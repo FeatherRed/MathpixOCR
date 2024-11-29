@@ -70,7 +70,7 @@ def main():
         config.output_dir = config.output_dir + config.run_name + '/'
         if not os.path.exists(config.output_dir):
             os.makedirs(config.output_dir)
-        tb_logger = SummaryWriter(os.path.join(f"tensorboard\{config.run_name}"), config.run_name)
+        tb_logger = SummaryWriter(os.path.join(f"tensorboard/{config.run_name}"), config.run_name)
     else:
         # only test
         config.output_dir = config.output_dir + config.load_name + '/'
