@@ -61,7 +61,6 @@ class model_transformer(Basic_Model):
         target_idxs = torch.tensor(target_idxs, dtype = torch.long).to(device)
         length = length.to(device)
         encoded_image = self.encoder(image)
-
         # 解码
         scores, decoded_caption, decoded_length, sort_idx = self.decoder(encoded_image, encoded_caption, length)
 
@@ -80,12 +79,16 @@ class model_transformer(Basic_Model):
         self.optimizer.zero_grad()
         loss.backward()
 
+        # 计算acc
+        predicts = self.decoder.generate(encoder_out = encoded_image, temperature = 0, top_p = 0.25)
+        predicts_string = self.tokenizer.decode(predicts)
+
         # 梯度截断
         clip_grad_norms(self.optimizer.param_groups, max_norm = self.config.max_norm)
 
         self.optimizer.step()
 
-        return loss.detach().cpu()
+        return loss.detach().cpu(), predicts_string
 
     def get_parameter_number(self):
         # encoder and decoder

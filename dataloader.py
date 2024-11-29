@@ -36,7 +36,6 @@ class PKLDataset(Dataset):
         img_id = self.all_data[idx]['ID']
         img_path = os.path.join(self.img_folder, f'{img_id}.png')
         img = Image.open(img_path).convert('RGB')
-
         # Apply transformations if provided
         if self.transform is not None:
             img = self.transform(img)
@@ -136,12 +135,12 @@ def load_pkl(pkl_dir):
 
 
 def create_dataloader(img_dir, pkl_dir, train_ratio = 0.9, train_batch_size = 32, valid_batch_size = 1000,
-                      transform = None):
+                      transform = None, seed = None):
     # todo config
     all_data = load_pkl(pkl_dir)
     # dataset = PKLDataset(img_folder = img_dir, pkl_file = pkl_dir, transform = transform)
 
-    trainlist, validlist = split_list(all_data, train_ratio = train_ratio, seed = 42)
+    trainlist, validlist = split_list(all_data, train_ratio = train_ratio, seed = seed)
     trainset = PKLDataset(img_folder = img_dir, transform = transform, all_data = trainlist)
     validset = PKLDataset(img_folder = img_dir, transform = transform, all_data = validlist)
     vocab = trainset.build_vocab()
@@ -162,17 +161,23 @@ if __name__ == '__main__':
     pkl_dir = "datasets/train/pkls"
     test_img_folder = 'datasets/test/images'
     transform = transforms.Compose([
-        transforms.Resize((224, 224)),  # Resize image to a fixed size
+        transforms.Resize((40, 240)),  # Resize image to a fixed size
         transforms.ToTensor(),  # Convert image to tensor
         transforms.Normalize(mean = [0.485, 0.456, 0.406], std = [0.229, 0.224, 0.225])  # Normalize image
     ])
 
-    # train_loader, valid_loader, vocab = create_dataloader(img_folder, pkl_dir, transform = transform)
-    # tokenizer = Tokenizer(vocab)
-    test_id = [104011, 105060]
-    ids = [i for i in range(test_id[0], test_id[1] + 1)] # 0 ~ 1049
-    testset = TestDataset(test_img_folder, ids, transform)
-    (id, img) = testset[1049]
-    print(id)
-    print(img.shape)
-
+    # # train_loader, valid_loader, vocab = create_dataloader(img_folder, pkl_dir, transform = transform)
+    # # tokenizer = Tokenizer(vocab)
+    # test_id = [104011, 105060]
+    # ids = [i for i in range(test_id[0], test_id[1] + 1)] # 0 ~ 1049
+    # testset = TestDataset(test_img_folder, ids, transform)
+    # (id, img) = testset[1049]
+    # print(id)
+    # print(img.shape)
+    dataloader, valid_dataloader, vocab = create_dataloader(img_dir = img_folder,
+                                                            pkl_dir = pkl_dir,
+                                                            valid_batch_size = 1000,
+                                                            transform = transform
+                                                            )
+    for imgs, refer, length in valid_dataloader:
+        print(refer)

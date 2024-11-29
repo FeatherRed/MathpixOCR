@@ -40,6 +40,8 @@ class Config(object):
         self.log_period = 30
         self.max_token_length = 50
         self.max_norm = 1.0
+
+        self.split_seed = 4037
         self.seed = 42
 
         self.img_dir = "datasets/mini/images"
@@ -60,9 +62,6 @@ class Config(object):
 def main():
     config = Config()
 
-    # set seed
-    np.random.rand(config.seed)
-    torch.manual_seed(config.seed)
 
     tb_logger = None
 
@@ -79,7 +78,7 @@ def main():
     transform = transforms.Compose([
         transforms.Resize((40, 240)),  # Resize image to a fixed size
         transforms.ToTensor(),  # Convert image to tensor
-        transforms.Normalize(mean = [0.485, 0.456, 0.406], std = [0.229, 0.224, 0.225])  # Normalize image
+        transforms.Normalize(mean = [0.9087, 0.9083, 0.9103], std = [0.2206, 0.2212, 0.2211])  # Normalize image
     ])
 
     if config.training:
@@ -102,12 +101,14 @@ def main():
         test_dataloader = create_testloader(config.test_img_dir, ids = config.test_ids,
                                             test_batch_size = config.test_batch_size,
                                             transform = transform)
-
+        # set seed
+        np.random.rand(config.seed)
+        torch.manual_seed(config.seed)
         # figure out trainer
         trainer = Runner(config, tokenizer = tokenizer)  # todo
 
         if config.load_path is not None:
-            trainer.load(config.load_path)
+            trainer.load(config.load_path + config.load_model)
 
         trainer.train(dataloader, valid_dataloader, test_dataloader, tb_logger = tb_logger)
     else:
