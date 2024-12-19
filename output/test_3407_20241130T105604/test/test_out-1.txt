@@ -1,0 +1,1050 @@
+\sin \left( 2 x - \frac { \pi } { 6 } \right)
+\vec { a } \cdot \vec { b }
+\overrightarrow { C D } = \vec { b }
+\overrightarrow { A B } = 2 \vec { b } - \vec { a }
+\overrightarrow { C E } = \overrightarrow { C A } + \overrightarrow { A E }
+2 \vec { b } - \vec { a }
+\overrightarrow { C A } = \vec { a }
+\frac { 1 } { 2 } \vec { a } + \vec { b }
+\overrightarrow { A D } \cdot \overrightarrow { C E } = 0
+A D \perp C E
+A C = B C
+\vec { a } = 2 \vec { b }
+\frac { 1 } { 2 } \vec { b } - \overrightarrow { 3 b } |
+2 \vec { b } - \frac { 1 } { 3 } \vec { a } + \vec { b }
+\vec { a } \cdot \vec { b } = 0
+\frac { 4 } { 3 } \vec { b } ^ { 2 }
+\frac { \pi } { 6 }
+f ( x ) \in \left[ 0 , \frac { 3 } { 2 } \right]
+2 \overrightarrow { C B } = 2 b = c
+\overrightarrow { C B } - \overrightarrow { C A }
+2 \vec { b } - \vec { a }
+\overrightarrow { C E } = \overrightarrow { C B } - \overrightarrow { C B }
+\overrightarrow { E B }
+\overrightarrow { C E }
+\vec { b } + \frac { 1 } { 2 } \vec { a }
+2 \vec { b } - \vec { b }
+\overrightarrow { A D } = \overrightarrow { A C } + \overrightarrow { C D }
+\overrightarrow { A C } + \frac { 1 } { 2 } \overrightarrow { C B }
+\overrightarrow { A D } \perp \overrightarrow { C E }
+\left( \overrightarrow { A C } , \frac { 1 } { 2 } , \frac { 1 } { 2 } \right)
+A D \perp C E
+\overrightarrow { C B } \perp \overrightarrow { A C }
+0 . 5 + \frac { 1 } { 2 } \ a n g l e 2
+\overrightarrow { C E } = \overrightarrow { C B } + \overrightarrow { B E }
+- \vec { a } + 2 \vec { b } \perp \vec { a }
+2 \vec { b } - \vec { a }
+A = ( 0 , 0 )
+B = ( x , 0 )
+\left( \frac { 1 } { 2 } , 0 \right)
+\vec { m } = ( b - 2 c , \cos B )
+\vec { n } = ( - a , \cos A )
+\vec { m } \| \vec { n }
+- a \cos B
+\cos ( A - 2 c )
+2 \sin C \cos C
+\sin ( B + A ) = \sin B
+\cos \ a n g l e A = \frac { \sqrt { 3 } } { 2 } = \frac { A D } { \sin 3 }
+A = \frac { \pi } { 3 } = 6 0 ^ { \circ }
+2 R = \frac { 4 \sqrt { 3 } } { 3 }
+a = 2 R \sin A
+\frac { 4 \sqrt { 3 } } { 3 } = \frac { \sqrt { 3 } } { 2 }
+a + b + c = 2 b + c
+O \ a n g l e B
+- a \cos B
+\cos A ( b - 2 c )
+- 2 \cos B
+\frac { 2 a b } { b }
+\cos \ a n g l e A C D
+\frac { A D ^ { 2 } + A C ^ { 2 } - A C ^ { 2 } } { 2 A D \cdot C D }
+C D = 1
+a ^ { 2 } b = a ^ { b } = b ^ { 2 }
+\frac { \sqrt { 3 } } { \sqrt { 3 0 } }
+( C - 2 R \cos B )
+\vec { n } = ( a - b , c )
+\vec { m } \| \vec { n }
+\frac { a ^ { 2 } + b ^ { 2 } - c ^ { 2 } } { 2 a b } - a
+\frac { 2 c ^ { 2 } } { 2 b c } = \frac { b ^ { 2 } + c ^ { 2 } - a ^ { 2 } } { b }
+c = \frac { 2 b ^ { 2 } + c ^ { 2 } } { 2 a b }
+2 b c \cos A = c
+\cos A = \frac { 1 } { 2 }
+A C = \frac { O Q } { B O } = 6
+2 R ^ { 2 } \cos A ^ { 2 } C R
+1 ^ { 2 } + 1 2
+2 R ^ { 2 }
+k ^ { 2 }
+3 \left( \frac { 2 \sqrt { 3 } } { 3 } \right) ^ { 2 }
+\ a n g l e A = 6 0 ^ { \circ }
+\ a n g l e A C D = 3 0 ^ { \circ }
+P = \ a n g l e D
+a = b = c ^ { 2 }
+\frac { \pi } { 3 }
+\ a n g l e A O C = \ a n g l e C O B = 9 0 ^ { \circ }
+\pi - 3 0 ^ { 2 } - 3 0 = 6 0 ^ { \circ }
+\ a n g l e A D C
+O A = O C
+\frac { 2 \sqrt { 3 } } { 3 }
+9 | \vec { a } | ^ { 2 }
+| 2 | \vec { a } | \vec { b } |
+\cos \theta
+1 2 \cos \theta = 6
+- 6 0 ^ { \circ }
+4 + 6 + 9
+4 | \vec { a } | ^ { 2 }
+\vec { a } = ( \sqrt { 3 } \sin x , \sin x )
+\vec { b } = ( \cos x , \sin x )
+| \vec { a } | = \sqrt { 3 \sin ^ { 2 } x + \sin ^ { 2 } x } = 2 \sin x
+| \vec { b } | = \sqrt { \cos ^ { 2 } x + \sin ^ { 2 } x }
+| \vec { a } |
+4 \sin ^ { 2 } x
+\cos ^ { 2 } x + \sin ^ { 2 } x
+\cos ^ { 2 } x
+\sin x ^ { 2 } + c x = 1 .
+1 - \sin ^ { 2 } \pi
+\sin ^ { 2 } x = \frac { 1 } { 4 }
+\sin x = \frac { 1 } { 2 }
+x = 3 0 ^ { \circ }
+\vec { a } = ( 0 , 0 , 1 )
+\vec { b } = ( 1 , 0 )
+\vec { a } = ( \sqrt { 3 } , 3 )
+\vec { b } = ( 0 , 1 )
+x = \frac { \pi } { 4 }
+\vec { a }
+f ( x )
+\frac { \sqrt { 3 } + 1 } { 2 }
+\left( \frac { 1 } { 2 } \sqrt { \frac { \sqrt { 6 } } { 3 } \right) } { \sqrt { 6 } }
+2 \sin x
+\sqrt { 3 \sin ^ { 2 } x + \sin ^ { 2 } x }
+| \vec { b } |
+2 \sin x = 1
+f ( x ) \in [ 0 , 1 ]
+\vec { a } \cdot \vec { b }
+\sqrt { 3 } \sin x - \cos x + \sin ^ { 2 } x
+\frac { - ( - e ) a } { 2 }
+\sqrt { 3 } \times \frac { 1 } { 2 } \sin 2 x
+1 - \cos 2 x
+- \frac { 1 } { 2 } \cos 2 x + \frac { 1 } { 2 }
+\left( 2 x - \frac { \pi } { 6 } \right)
+2 x - \frac { \pi } { 3 }
+\overrightarrow { A B } = \overrightarrow { C B } - \overrightarrow { C A }
+2 \overrightarrow { C D } - \overrightarrow { C A }
+\overrightarrow { A B } = 2 \vec { b } - \vec { a }
+\vec { b } + \frac { 1 } { 2 } \vec { a }
+\overrightarrow { B D }
+C E
+\frac { 2 } { 3 } B C
+\frac { 1 } { 2 } \overrightarrow { C B } \cdot \overrightarrow { C B } .
+\frac { 1 } { 3 } \overrightarrow { C B }
+\frac { 1 } { 3 } \overrightarrow { C B } - \frac { 1 } { 2 } \overrightarrow { C A } - \frac { 1 } { 3 }
+\cos \theta ^ { \circ } = 1 0
+\overrightarrow { A D } = \frac { 1 } { 3 } \overrightarrow { C B } - \frac { 1 } { 3 } \overrightarrow { C A } = \frac { 1 } { 2 } \overrightarrow { C B }
+A D \perp C E
+\vec { m } \| \vec { n }
+( b - 2 c ) \cos A = - a \cos B + b
+b ^ { 2 } + c ^ { 2 } - a ^ { 2 }
+\frac { a } { \sin A }
+a = 2 R \sin A
+\ a n g l e A = \frac { \pi } { 3 }
+C D ^ { 2 } = A D ^ { 2 } + C D ^ { 2 } - 2 A D \cdot A C \cdot \cos 3 0 ^ { \circ }
+1 + 3 - \sqrt { 3 } \times 2 \sqrt { 3 }
+C D = 1
+\ a n g l e C D B
+| \vec { a } | = \sqrt { 1 ^ { 2 } + 2 ^ { 2 } } = 5
+| \vec { b } |
+\sqrt { 1 + n ^ { 2 } } =
+\vec { a } \cdot \vec { b }
+\sqrt { 2 } - \sqrt { 2 } < \cos 0
+\left( - \frac { 1 } { 2 } , \frac { 1 } { 2 } \right)
+2 \vec { a } + \vec { b } = ( 3 , 3 )
+( 2 \vec { a } + \vec { b } ) ^ { 2 }
+3 ( k - 1 ) + 3 ( 2 k + 1 )
+3 k - 3 + 6 k + 3
+9 k = 0
+\cos 3 0 ^ { \circ }
+D C ^ { \prime } = 1
+D C = 1
+A D = C D = 1
+\ a n g l e A C D = \ a n g l e C D C = 9 0 ^ { \circ }
+B C \perp C D
+\ a n g l e A C D = 3 0 ^ { \circ }
+\ a n g l e B C A = 6 0 ^ { \circ }
+\ a n g l e B A C D C = 9 0 ^ { \circ }
+\cos \ a n g l e A B C D
+\overrightarrow { A C } + \overrightarrow { C B }
+- \sqrt { a }
+2 \sqrt { 6 }
+2 \vec { b }
+\overrightarrow { C A } + \overrightarrow { A E }
+\frac { 1 } { 2 } \vec { a } + \vec { b }
+E F - A D
+\sqrt { 1 3 + 6 }
+\sqrt { 9 }
+\overrightarrow { B Q } - 2 \vec { B } _ { 1 }
+( 1 , 3 )
+2 ( 2 , 1 , - 1 ) ( 1 , 1 , 3 )
+( 3 , 3 )
+k \vec { a } - \vec { b }
+( 1 , 2 , 0 )
+( k - 1 , 2 k + 1 )
+3 k - 3 + 6 k + 3 = 0
+\vec { m } = a \cdot b _ { 1 } , b _ { 2 }
+k = 0
+3 k - 3 + 6 k + 3
+3 ( k + 1 ) - 3 ( 2 k + 1 ) = 0
+k \vec { a } - \vec { b }
+( k \vec { a } - \vec { b } )
+( 3 , 3 )
+| \vec { a } |
+C D ^ { 2 } = A D ^ { 2 } + A C ^ { 2 } - 2 A D \cdot A C \cdot \cos \ a n g l e C A D
+1 + 3 - \sqrt { 2 } \times \sqrt { 3 } \frac { 2 } { 3 }
+C D = 1
+\frac { A D } { \sin \ a n g l e A C D }
+\frac { 1 } { \sin \ a n g l e A C D }
+\frac { 1 } { 3 }
+\sin \ a n g l e A C D = \frac { 1 } { 2 }
+\ a n g l e A C D = 3 0 ^ { \circ }
+B C \perp C D
+\ a n g l e B C A = 6 0 ^ { \circ }
+A C ^ { 2 } + B C ^ { 2 }
+3 + B C ^ { 2 }
+A C ^ { 2 } + A B ^ { 2 } < C _ { 3 } ^ { 3 }
+A B + B C + C D
+\vec { a } \cdot \vec { b }
+\sqrt { 1 5 0 } 0 , 5
+4 k = 0
+k = 0
+- k + 2 - 2
+2 k a ^ { 2 }
+( 2 \vec { a } + \vec { b } )
+( k \vec { a } - \vec { b } )
+\vec { a } = ( 1 , 2 )
+- \frac { \sqrt { 1 0 } } { 1 0 }
+\cos \theta = - \frac { \sqrt { 1 0 } } { 1 0 }
+f ( x ) \geqslant f ( - 2 )
+\cos B = \frac { a ^ { 2 } + b ^ { 2 } - c ^ { 2 } } { 2 a b } = \frac { \sqrt { 2 } } { 2 }
+a ^ { 2 } = - \frac { 1 } { 3 }
+\cos \ a n g l e A D C
+2 \sqrt { 3 } ( \sqrt { 3 } - 1 )
+\ a n g l e A C D
+\overrightarrow { C A } = \vec { a }
+\overrightarrow { C D } = \vec { b }
+\ a n g l e A = \ a n g l e C
+\vec { a } = 2 \vec { b }
+\overrightarrow { A B } = \overrightarrow { A C } + \overrightarrow { C B }
+- \vec { a } + 2 \vec { b }
+2 \vec { b } - \vec { a }
+\overrightarrow { C E }
+\overrightarrow { C F } - \frac { 1 } { 3 } \overrightarrow { A B }
+\vec { b } + \frac { 1 } { 2 } \vec { a }
+\overrightarrow { A E } = 2 \overrightarrow { E B }
+\overrightarrow { A B } - \overrightarrow { A F }
+\overrightarrow { A E } = \overrightarrow { A C } + \overrightarrow { C A }
+\overrightarrow { C E }
+\frac { 1 } { 3 } \overrightarrow { A B }
+( b - 2 c ) \cos A
+( \sin B - 2 \sin C ) \cos A
+- \sin A \cos B
+\sin ( A + B ) \cdot \cos B - 2 \sin C
+\sin ( A + B )
+2 \sin C \cos C
+\cos A = \frac { 1 } { 2 }
+A = \frac { \pi } { 3 }
+A \in ( 0 , \pi )
+\widehat { C D }
+\overrightarrow { C B } - \overrightarrow { C A }
+2 \vec { b } - \vec { a }
+\sqrt { 4 \sin ^ { 2 } x + \sin ^ { 2 } x } = \sqrt { 1 3 } \sin x
+2 \sin ^ { 2 } x = 1
+\sin \ a n g l e M = \frac { 1 } { 2 }
+x = \frac { \pi } { 6 }
+\left[ 0 , \frac { \pi } { 2 } \right]
+\sqrt { 3 } \sin x \cos x + \sin ^ { 2 } x
+2 \sin x \left( \frac { \sqrt { 3 } } { 3 } + 1 \right) x \sin \frac { 1 } { 2 }
+f ( 1 )
+\frac { 2 } { - 8 } { a } - 2
+\vec { b } + \frac { 1 } { 2 } \vec { a }
+\vec { m } - \frac { 1 } { 2 } \vec { n }
+\overrightarrow { A B }
+\overrightarrow { C B } - \vec { A }
+\left( \frac { 2 } { 5 } a _ { n } \right) \left( 1 - 2 a _ { n } \right)
+| \overrightarrow { b } |
+| \vec { a } | = | \vec { b } |
+| \vec { a } | = 1
+3 \sin ^ { 2 } x + \sin ^ { 2 } x = 1
+\sin ^ { 2 } x = \frac { 1 } { 4 }
+\sin x = \frac { 1 } { 2 }
+x \in \left[ 0 , \frac { \pi } { 2 } \right]
+x = \frac { \pi } { 6 }
+f ( x ) _ { \text { m a x } } = 2
+f ( x ) _ { m } = 0
+[ 0 , 2 ]
+2 \sin x - \sin x ( x + 3 )
+\sqrt { 3 } \sin x \cos x + \sin ^ { 2 } x
+f ( x ) = \vec { a } \cdot \vec { b }
+| 3 \vec { a } - 2 \vec { b } | = \sqrt { 7 }
+| \vec { a } | = | \vec { b } | = 1
+\vec { a } \vec { b } = x - \frac { 1 } { 2 } \times 2 = 0
+\sqrt { 4 0 a ^ { 2 } + 2 5 a + 2 6 }
+\sqrt { 4 + 2 x } + \frac { 1 2 } { x }
+a - 1 > a + 1 + a - 2
+\cos \theta = \frac { 1 } { 2 }
+\theta = \frac { \pi } { 3 }
+4 \vec { b } ^ { 2 } = 7
+3 \sqrt { 3 }
+\theta = \frac { \pi } { 3 }
+( 3 \vec { a } - 2 \vec { b } ) ^ { 2 } = 7
+\sqrt { 4 + 6 + 9 }
+9 - 1 2 | \vec { a } | = \sqrt { 1 9 }
+\cos \theta = \frac { 1 } { 2 }
+| 3 \vec { a } - 2 \vec { b } | = \sqrt { 7 }
+1 2 \vec { a } - \vec { b }
+| 2 \vec { a } + 3 \vec { b } | = \sqrt { 1 9 }
+\sqrt { ( 2 \vec { a } + 3 \vec { b } ) ^ { 2 } }
+C D = 1
+\sqrt { 3 } c = 3 \sqrt { 2 }
+\cos \ a n g l e A D C
+C D ^ { 2 } = A D ^ { 2 }
+C D = A D
+\ a n g l e A C D = \ a n g l e C D A = 3 0 ^ { \circ }
+4 a ^ { 2 } + 2 \bar { b } - 1 a _ { 1 } b ^ { 2 } = 1
+1 2 \sqrt { 2 0 0 } \times 1 0 0 \ %
+4 + 9
+C = 6 0 ^ { \circ }
+\frac { 9 } { 4 } 9 + 9 \sqrt { 3 }
+x _ { 1 } x _ { 2 } + y _ { 2 } = m - 1 .
+\sqrt { 1 ^ { 2 } + ( - 1 ) ^ { 2 } + ( - 2 ) ^ { 2 } }
+\frac { \vec { a } \cdot \vec { b } } { | \vec { b } | }
+| 2 \vec { a } + 3 \vec { b } |
+( k \vec { a } - \vec { b } )
+2 \vec { a } + 3 \vec { b } = ( 3 , 3 )
+( k - 1 , k , 2 )
+3 \times ( 2 - x ) = 1 6
+3 k - 3 + 6 k - 3 = 0
+\frac { 3 - 1 } { 3 + 1 - 1 }
+\ a n g l e A B C + \ a n g l e A B C
+\frac { 2 } { \sin B }
+a ^ { 2 } + b ^ { 2 } - 1 2 a b - 4 \sqrt { 3 } a b
+| \vec { a } | = | \vec { b } | = 1
+= \sqrt { 1 4 4 + 2 ^ { 2 } } + 2
+| 3 \vec { a } - 2 \vec { b } | = \sqrt { 1 9 }
+A C = \delta { R } = \frac { 1 } { 2 }
+2 \sqrt { 3 } \times \frac { \sqrt { 3 } } { 2 }
+a = 1
+\ a n g l e A C D = 3 0 ^ { \circ }
+\frac { 1 x + 1 } { x }
+\frac { 2 c ^ { 2 } } { 2 a }
+\frac { b ^ { 2 } + c ^ { 2 } - a ^ { 2 } } { 2 b }
+( 0 , \pi )
+\frac { 1 } { 2 } A C = 1
+2 \cdot A C - A B
+\frac { 2 - b } { 2 a } = \frac { a \cdot b } { \sin B }
+\overrightarrow { A B } = 2 \vec { b } - \vec { a }
+\overrightarrow { C D } = ( 0 , 1 , 0 )
+( 0 , 2 \lambda )
+\frac { 4 } { 3 } x - \frac { 3 } { 4 } x - 9 = 0
+\overrightarrow { A D } \perp \overrightarrow { C E }
+\vec { a } = ( 0 , 2 , 0 )
+\frac { 1 } { 3 } \vec { a }
+\overrightarrow { C E } = \frac { 2 } { 3 } \vec { a } + \vec { b }
+| \vec { a } | = | \vec { b } |
+\sqrt { ( \sqrt { 3 } \sin x ) ^ { 2 } + \sin ^ { 2 } x }
+\sqrt { \cos ^ { 2 } x + \sin ^ { 2 } x }
+3 \sin ^ { 2 } x + \sin ^ { 2 } x = \cos ^ { 2 } x + \sin ^ { 2 } x
+3 \sin ^ { 2 } x = \cos ^ { 2 } x
+\sin ^ { 2 } x + \cos ^ { 2 } x = 1
+4 \sin ^ { 2 } x = 1
+x = \frac { \pi } { 6 }
+x \in \left[ 0 , \frac { \pi } { 2 } \right]
+\vec { a } \cdot \vec { b }
+\sqrt { 3 } \sin x \cos x
+\sin \left( 2 x - \frac { \pi } { 6 } \right) + 2
+f ( x ) _ { \min } = 3 3
+f ( x ) _ { \min } = 0
+f ( x ) \in \left[ 0 , \frac { 3 } { 2 } \right]
+b c = a
+\frac { a } { \sin A }
+\frac { c } { \sin C }
+\ a n g l e A C D = \frac { \pi } { 6 }
+B C \perp C D
+a _ { 2 } = 3 ^ { n - 1 } + 2
+\overrightarrow { A D } = \overrightarrow { B D } - \overrightarrow { A B }
+\frac { 1 } { 2 } \overrightarrow { C B } - \overrightarrow { C A } - \vec { C }
+\frac { 1 } { 2 } \overrightarrow { C B } - \overrightarrow { C A } + \overrightarrow { C D }
+2 \overrightarrow { D C } - \overrightarrow { C A }
+\overrightarrow { C E } = \overrightarrow { B E } - \overrightarrow { B C }
+\frac { 1 } { 2 } \overrightarrow { C B } \cdot \overrightarrow { A B } + \frac { 1 } { 2 } \overrightarrow { C B } = \frac { 1 } { 2 } \overrightarrow { C B } - \overrightarrow { C A }
+= \frac { 1 } { 2 a b } + \frac { 1 } { 2 }
+\frac { 1 } { 2 } \overrightarrow { A C } \cdot \overrightarrow { A B } ^ { 2 } - 2 \overrightarrow { A D } \cdot \overrightarrow { A C } + \frac { 1 } { 3 } \overrightarrow { A C } + \frac { 1 } { 3 }
+\overrightarrow { C E } = \overrightarrow { C A } - \overrightarrow { A E }
+\left( \frac { 1 } { 2 } A _ { 1 } B _ { 1 } \right) + \frac { 1 } { 2 } A B
+\frac { 1 } { 2 } \overrightarrow { A B } \cdot \overrightarrow { A B } ^ { 2 } - \overrightarrow { A B } ^ { 2 } - \overrightarrow { A B } ^ { 2 } - 4 A
+\sqrt { 2 } \cdot A _ { 1 } D
+\frac { 1 } { 2 } \overrightarrow { A D } \cdot \vec { n } \cdot A \vec { A } _ { 1 } ^ { 2 }
+\left( \frac { P E } { 2 } , \frac { P Q } { 2 } \right)
+( 3 , 3 )
+( 1 - 2 k + 1 ) \cdot a _ { 2 }
+9 k + 3 = 0
+k = - \frac { 4 } { 3 }
+\left( - \frac { 1 } { 2 } , \frac { 1 } { 2 } \right)
+\vec { a } \cdot \vec { b } = 1
+2 \vec { a } + \vec { b }
+k - 2 = 0
+\sqrt { 1 6 + 3 }
+\sqrt { 4 \vec { a } ^ { 2 } + 1 2 \vec { a } \vec { b } + 9 \vec { b } ^ { 2 } }
+( 2 \vec { a } + 3 \vec { b } ) ^ { 2 }
+\cos \theta = \frac { 1 } { 2 }
+9 + 4
+\overrightarrow { 3 a } - 2 \vec { b }
+| 2 \vec { a } + 3 \vec { b } |
+2 4 + 1 2 - 1 2 0
+| 2 \vec { a } + 3 \vec { b } |
+| 2 \vec { a } + 3 \vec { b } |
+9 \vec { a } ^ { 2 }
+\frac { \sin B } { \cos A } = \frac { \sqrt { 3 } } { 3 }
+x \in \left[ 0 , \frac { \pi } { 2 } \right]
+\sqrt { 3 } \sin x = \cos x
+\sqrt { 3 } \sin x \cos x
+- a \cos C - \sqrt { 3 }
+( b - 2 c ) \cos A = 0
+\frac { c } { \sin C } = 2 R
+\left( 8 , B ^ { 2 } - 2 R c \right) ^ { 2 }
+- \sin A \cos B
+\sin A \cos B + \sin B \cos A
+\sin ( A + B )
+\cos A = \frac { 1 } { 2 }
+a + b + c
+\sin A + B \sin B + 2 \sin C
+A = \frac { \pi } { 3 }
+\sqrt { 4 + 2 n + 3 \sqrt { 2 } }
+\sqrt { a ^ { 2 } + b ^ { 2 } + 2 a b - 4 a b }
+| 2 \vec { a } + 3 \vec { b } |
+\frac { 1 } { 2 } = \frac { 1 } { 2 }
+\cos \langle \vec { a } , \vec { b } \rangle
+\sqrt { a ^ { 2 } + b ^ { 2 } - a ^ { 2 } } = \sqrt { 1 + 2 5 }
+\frac { \vec { a } \cdot \vec { b } } { | \vec { a } | | \vec { b } | }
+C D = 1
+A D = C D
+2 \times 1 \times \sqrt { 3 }
+A D ^ { 2 } + A C ^ { 2 }
+B C = C
+\frac { a ^ { 2 } + b ^ { 2 } - c ^ { 2 } } { 2 a b }
+a c ^ { 2 } - 3 ^ { 2 } +
+\overrightarrow { C F } - \overrightarrow { C A }
+C D = B D
+2 \sqrt { b c - \cos \theta }
+\overrightarrow { A B } = \overrightarrow { C B }
+\vec { a } + \frac { 1 } { 2 } \vec { a }
+\vec { a } + \vec { b }
+\overrightarrow { A F } + \overrightarrow { A E }
+\sqrt { 3 } \sin x \cos x
+f ( x ) = \vec { a } \cdot \vec { b }
+| \vec { a } | = | \vec { b } |
+( \sqrt { 3 } \sin x ) ^ { 2 } + \sin ^ { 2 } x
+3 \sin ^ { 2 } x + \sin ^ { 2 } x
+2 \sin x
+\sin x + \cos x = 0
+x = 3 0 ^ { \circ }
+C ^ { \prime } = |
+C D ^ { 2 } = A D ^ { 2 } + A C ^ { 2 }
+\frac { a } { \sin A }
+\frac { b } { \sin B } = \frac { c } { \sin C }
+\frac { 1 } { \sin \ a n g l e C A D }
+\sin \ a n g l e A C D = \frac { 1 } { 2 }
+C D = A D
+\ a n g l e A C D = \frac { a } { 5 }
+\ a n g l e B C D = \frac { 2 } { 3 }
+\ a n g l e B A C + \ a n g l e C D B = 6 0 ^ { \circ }
+\ a n g l e A B C = \frac { \pi } { 3 }
+\frac { B C } { \sin \ a n g l e B A C }
+\frac { B C } { \sqrt { 3 } }
+\frac { 1 + 3 - c ^ { 2 } } { 2 \sqrt { 3 } }
+B C \perp C D
+\ a n g l e A C B = 6 0 ^ { \circ }
+B C ^ { 2 } + A B ^ { 2 } = A B ^ { 2 }
+A B ^ { 2 } = A C ^ { 2 } + B C ^ { 2 } - A C ^ { 2 } - 2 A B \cdot A C
+3 B + B C ^ { 2 } - B C
+2 B C ^ { 2 } - 3 \sqrt { 3 }
+D C = A D = 1
+\sin ( A + B )
+\cos A = \frac { 1 } { 2 }
+b ^ { 2 } + c ^ { 2 }
+\frac { \pi } { 3 }
+a \cos B = 0
+\left( - \frac { \pi } { 3 } , \frac { \pi } { 2 } \right)
+1 0 k - 2
+k \vec { a } - \vec { b }
+x = \sqrt { 1 0 }
+\frac { 1 - \lambda } { 2 } = \frac { - 7 } { 2 }
+\overrightarrow { C E } = \frac { 1 } { 2 } \overrightarrow { C B }
+\overrightarrow { A B } = \overrightarrow { A C } + \overrightarrow { C B }
+\overrightarrow { A B } = 2 \vec { b } - \vec { a }
+\overrightarrow { C E } = \overrightarrow { C B }
+\frac { 1 } { 2 } \vec { a } - \vec { b } > 2 \vec { a }
+\frac { 1 } { 2 } A D + \sqrt { 3 } A D
+( - \vec { a } + 2 \vec { b } )
+\overrightarrow { C E } = \overrightarrow { C B } + \overrightarrow { B E }
+- \frac { 1 } { 3 } a b \frac { 3 } { 4 }
+\frac { 1 - 2 } { 2 } x > 0
+x _ { 1 } x _ { 2 } + x _ { 1 } ^ { 2 }
+\left( - \frac { 1 } { 2 } , \frac { 1 } { 2 } \right)
+k \vec { a } - \vec { b }
+2 \vec { a } + \vec { b }
+3 ( k - 1 ) + 3 \times 6 + 1 = 0 . 1 5
+k = 0
+\frac { \vec { a } \cdot \vec { b } } { | \vec { b } | }
+\left( - \frac { 1 } { 2 } , \frac { 1 } { 2 } \right)
+( 2 \vec { a } + \vec { b } ) ( k - 1 2 0 ) = 0
+( 2 + 1 ) ( 3 + 2 ) = 1 5
+( k - 1 , k , 2 k + 1 )
+3 k - 3 + 6 k + 6 = 0
+( b - 2 c ) \cos A
+\cos A = \frac { 1 } { 3 }
+A = \frac { \pi } { 3 }
+a + b + c
+\frac { 3 \sqrt { 3 } } { 3 } \sin \theta + \frac { 1 } { 2 }
+\frac { 2 \sqrt { 3 } } { 3 } \sin B
+R = \frac { 2 \sqrt { 3 } } { 3 }
+2 \sin B + \cos C + \sin B \cos A
+\vec { a } \cdot \vec { b } = - 1
+| \vec { b } | = \sqrt { 2 }
+| \vec { a } | = \sqrt { 5 }
+( 1 - 1 , 2 k + 1 )
+| \vec { a } - \vec { b }
+2 \vec { a } + \vec { b }
+k = 0
+k = 0
+\cos \langle \vec { a } , \vec { b } \rangle
+\frac { \vec { a } \cdot \vec { b } } { | \vec { a } | | \vec { b } | }
+\left( - \frac { \sqrt { 2 } } { 2 } , \frac { \sqrt { 2 } } { 2 } \right)
+3 k - 3 + 6 k + 3 = 0 k - 1
+k \vec { a } - \vec { b }
+C D = 1
+2 \sqrt { 3 } \times \frac { \sqrt { 3 } } { 2 }
+\frac { A D } { \sin \ a n g l e A C D }
+\frac { C D } { \sin \ a n g l e B A C }
+\sqrt { 3 } 1
+\ a n g l e B C A = 6 0 ^ { \circ }
+\vec { b } = ( 1 , - 1 )
+( x + 1 ) ( x - 2 ) = 1
+\left( - \frac { \sqrt { 3 } } { 2 } , \frac { 1 } { 2 } \right)
+\frac { 1 } { 2 } \cdot \left( \sqrt { 1 5 } - \frac { 1 } { 1 0 } \right)
+\frac { \vec { a } \cdot \vec { b } } { | \vec { b } | }
+( k - \lambda ) \cdot \vec { a } \cdot \vec { b } = - 7
+\vec { a } \cdot \vec { b } = - 1
+\sqrt { 1 ^ { 2 } + 2 ^ { 2 } } = \sqrt { 5 }
+- ( 2 \sqrt { 2 } - 1 ) ^ { 2 } - 2 \theta = - 1
+\frac { 1 } { \sin C } = \frac { 1 } { \sin B }
+4 - 2 \sqrt { 3 }
+a = 1
+\theta = \frac { \pi } { 3 }
+4 + 2 k + \frac { 1 } { 1 6 } 9
+| 2 \vec { a } + 3 \vec { b } | = \sqrt { 1 9 }
+4 | \vec { a } | ^ { 2 }
+\cos \theta = \frac { 1 } { 2 }
+\vec { b } = \frac { 1 } { 2 } b c
+\overrightarrow { A B } = 2 \vec { b } - \vec { a }
+\frac { 1 } { 2 } \vec { a } + \vec { b }
+A D \perp C E
+\overrightarrow { A E } = 2 \overrightarrow { E B }
+\overrightarrow { A B } = 2 \vec { b } - \vec { a }
+\frac { 4 } { 3 } \vec { b } + \frac { 3 } { a }
+\vec { b } - \vec { a }
+\frac { 1 } { 3 } a ^ { 2 }
+\overrightarrow { A B } = \overrightarrow { C B } - \overrightarrow { C A }
+2 \vec { b } - \vec { a }
+\overrightarrow { C E } = \overrightarrow { C B } + \overrightarrow { B E }
+\overrightarrow { C B } + \overrightarrow { C B } + \overrightarrow { A B }
+\vec { b } + \frac { 1 } { 2 } \vec { a }
+2 \sin x
+x \in \left[ 0 , \frac { \pi } { 2 } \right]
+x _ { 1 } x _ { 2 } + x _ { 1 } y _ { 2 }
+f ( x ) = \vec { a } \cdot \vec { b }
+2 \sin x = 1
+\sqrt { x ^ { 2 } + y ^ { 2 } }
+| x + 2 | - |
+\sqrt { 1 ^ { 2 } + 2 ^ { 2 } }
+\sqrt { 1 ^ { 2 } + 1 - ( - 1 ) ^ { 2 } }
+- \frac { 3 \sqrt { 1 3 } } { 1 0 0 }
+a \cdot \cos C - \sqrt { 3 } a .
+( 2 \vec { a } + \vec { b } )
+k = 0
+- \frac { \sqrt { 3 0 } } { 1 0 0 }
+\sqrt { | 3 \vec { a } - 2 \vec { b } | } = - 1
+\sqrt { 4 + 6 + 9 }
+\overrightarrow { A D ^ { 2 } }
+\vec { a } \cdot \vec { b } = \frac { 1 } { 2 }
+b - 2 c = 2 a - 1
+\cos B = \sin ( A + C )
+x - ( a ( 4 < 0 . )
+2 \cos A = 1
+a + b + c
+B C = \frac { \sqrt { 3 } + 1 } { 2 }
+\sin B + \sin B
+2 + 4 = 6
+2 \vec { b } - \vec { a }
+\overrightarrow { C E } = \overrightarrow { A C } + \overrightarrow { A E }
+\overrightarrow { A E } = 2 \overrightarrow { E B }
+\overrightarrow { A D } = \overrightarrow { C D } + \overrightarrow { A C }
+\overrightarrow { A D } = \overrightarrow { C E }
+\ a n g l e A C B = 9 0 ^ { \circ }
+\frac { A C ^ { 2 } + B C ^ { 2 } } { 2 A B \cdot B C }
+A C ^ { 2 } + B C ^ { 2 } - A B ^ { 2 }
+3 6 + B C ^ { 2 } - 2 5 ^ { \circ }
+A C ^ { 2 } = B C ^ { 2 } + A B ^ { 2 }
+\ a n g l e A C D = 3 0 ^ { \circ }
+\frac { \sqrt { 3 } } { 2 } = \frac { A D } { \sin 3 } = \frac { 1 } { 2 }
+D C = 1
+\frac { A D } { \sin \ a n g l e B } = \frac { 1 } { \sin \ a n g l e A C D }
+\ a n g l e A C D = 3 0 ^ { \circ }
+\frac { A C } { \sin \ a n g l e A C B }
+\frac { A B } { \sqrt { 3 } }
+\frac { \sqrt { 3 } } { \sin \ a n g l e A C }
+\frac { 3 } { 3 } = A B ^ { 2 } + A C ^ { 2 }
+b ^ { 2 } + c ^ { 2 } - a ^ { 2 }
+- a \cos B
+\frac { a ^ { 2 } + b ^ { 2 } - c ^ { 2 } } { 2 a b } - \frac { 1 } { 2 }
+\frac { b ^ { 2 } + c ^ { 2 } - a ^ { 2 } } { 2 b c }
+k ^ { 2 } - 6 0 \pi x ^ { 2 } - 6 2
+\frac { 2 c } { B }
+2 a ^ { 2 }
+- 4 ^ { 2 } <
+\frac { b ^ { 2 } + c ^ { 2 } - a ^ { 2 } } { 2 b c } .
+c = 6 0 ^ { \circ } + \frac { 2 \pi } { 3 6 }
+C D ^ { 2 } = A D ^ { 2 }
+2 A D \cdot A B \cdot \cos B .
+C D ^ { 2 } = 1 + 3 - 2 \sqrt { 3 } \times \frac { \sqrt { 3 } } { 3 }
+A D = C D = 1
+\ a n g l e C A D = \ a n g l e C A D = 6 0 ^ { \circ }
+B C ^ { 2 } = A B ^ { 2 } + A C ^ { 2 } - 2 A B \cdot A C \cdot \cos \ a n g l e A C B
+C D = 1
+\overrightarrow { C B } - \overrightarrow { C A }
+\vec { b } + \frac { 1 } { 2 } \vec { a }
+\vec { b } - \vec { a }
+2 \vec { b } + \frac { 1 } { 3 } ( k \vec { a } - \vec { b } )
+\overrightarrow { C E } = \overrightarrow { C B } + \overrightarrow { B E }
+- \frac { 2 } { 3 } a = 2 a
+A D \perp C E
+( \vec { a } - \vec { b } )
+\frac { 1 } { 2 } \vec { a } + \vec { b }
+3 \sin ^ { 2 } x
+\cos ^ { 2 } x + \sin ^ { 2 } x
+3 \sin ^ { 2 } x + \sin ^ { 2 } x
+\sqrt { 3 } \sin x \cos x
+\sin ^ { 2 } x
+\cos \theta = \frac { 1 } { 2 }
+3 a - 2 b
+2 \vec { a } + 3 \vec { b }
+| 2 \vec { a } + 3 \vec { b } |
+\overrightarrow { A B } = \overrightarrow { A C } + \overrightarrow { C B }
+\overrightarrow { A C } + \overrightarrow { C E }
+\overrightarrow { C B } + \overrightarrow { B E }
+2 \overrightarrow { C B } + \overrightarrow { C B }
+\overrightarrow { B E } = \frac { 1 } { 2 } \overrightarrow { A B }
+2 \sqrt { 6 + 2 \sqrt { 6 } + 2 \sqrt { 3 } }
+- \vec { a } + \vec { b }
+\frac { 4 } { 3 } \vec { b } + \frac { 3 } { a ^ { 2 } }
+\cos \theta = - 1
+2 \vec { a } + \vec { b }
+3 k - 3 + 6 k + 3 = 0
+9 k = 0
+k = 0
+- a \cos B
+b - 2 c
+\triangle A D C \perp B C \text { . }
+\vec { m } \| \vec { n }
+\frac { b ^ { 2 } + c ^ { 2 } - a ^ { 2 } } { 2 b c }
+\frac { - a b } { \cos B } = \frac { 1 } { 2 }
+- 2 a b \cos A
+( b - 2 c ) ^ { 2 } + ( b - c ) ^ { 2 } = a
+b ^ { 2 } + c ^ { 2 } - 2 b ^ { 2 } - 2 b c \cos A = 2 - 3 c
+\cos 3 0 ^ { \circ }
+\frac { C _ { 4 } ^ { 2 } a _ { 2 } ^ { 2 } } { a _ { 1 } q ^ { 2 } - 1 8 }
+a _ { 2 } = - 1
+\frac { a } { \sin 3 0 ^ { \circ } }
+\frac { a } { \sin \ a n g l e A C D }
+2 = \frac { A C } { \sin \ a n g l e C A D }
+\sin \ a n g l e A C D = \frac { 1 } { 2 }
+\ a n g l e A C D = 3 0 ^ { \circ }
+B C \perp C D
+\frac { A B } { \sin \ a n g l e A B C }
+\frac { A C } { \sin B }
+2 ( k + 1 )
+R = C
+\sqrt { x ^ { 2 } + y ^ { 2 } }
+| \vec { a } | \cdot \cos \theta
+( 2 \vec { a } + \vec { b } ) ( k \vec { a } - \vec { b } ) = 0
+2 k + 1
+4 - 1
+3 ( k - 1 ) + 3 ( 2 k + 1 ) = 0
+3 k - 3 + 6 k + 3 = 0
+k = 0
+b ^ { 2 } + c ^ { 2 } - a ^ { 2 } = b ^ { 2 }
+\frac { b ^ { 2 } + c ^ { 2 } - a ^ { 2 } } { 2 b c }
+\frac { 6 } { \sin c }
+A = 6 0 ^ { \circ }
+x ^ { 2 } = 4
+x = 2 .
+2 x \frac { 2 4 } { 9 }
+- a \cos c
+( b - 2 c ) \cos A
+\frac { b ^ { 2 } + a ^ { 2 } - c ^ { 2 } } { b }
+\sin A \cos C + \sin C \cos A + 2 \sin C .
+A B = \frac { \sqrt { 3 } } { 3 } A C
+\frac { A C } { \sin B }
+\frac { \sqrt { 3 } } { 2 } \cos \frac { A + B } { 2 } .
+\frac { 1 } { 2 } \cos ^ { 2 } + \cos ^ { 2 } x _ { 1 } ^ { 2 }
+A = 6 0 ^ { \circ }
+\sin A = \frac { a } { 2 R }
+( b - 2 c ) \cos A = - a \cos B + b
+( b - 2 ) e
+b \cos A
+\cos B = C
+\frac { b _ { 2 } + b _ { 2 } } { 2 b _ { 1 } } \leq s l a n t 4
+\frac { b ^ { 2 } + c ^ { 2 } - a ^ { 2 } } { 2 b c }
+\frac { b ^ { 2 } + c ^ { 2 } - a ^ { 2 } } { 2 b }
+\cos A = \frac { c } { 2 R } = \frac { 1 } { 2 }
+b + c \leq s l a n t 2 a \leq s l a n t 2
+b c + \sqrt { 3 } b c = 2 \sqrt { 3 } b
+\cos A = \frac { 1 } { 2 }
+| \vec { a } | = \sqrt { 5 }
+| \vec { D } | = \sqrt { 2 }
+\vec { a } \cdot \vec { b } = 1 - 2 = - 1
+\overrightarrow { T E } \cdot \overrightarrow { A _ { 1 } } \vec { n } _ { 1 } \cdot \vec { n } _ { 3 }
+\frac { \vec { a } \cdot \vec { b } } { | \vec { b } | } = - \frac { 1 } { \sqrt { 5 } }
+\frac { \vec { a } \cdot \vec { b } } { | \vec { a } | } = - 1
+2 \vec { a } + \vec { b }
+k \vec { a } - \vec { b }
+2 b ^ { 2 } - 2 \sqrt { 6 } a b ^ { 2 } - 2 \sqrt { 3 } a b
+9 k = 0
+k = 0 .
+1 0 k + 2 - k - 2 = 0
+2 \times a \sqrt { 3 }
+2 \times ( - 1 ) + ( - 1 ) + 8
+3 \sin ^ { 2 } x + \sin ^ { 2 } x
+x = \frac { \sqrt { 6 } } { 6 }
+2 \sin x = 1
+2 \sin x
+\overrightarrow { A B } = \overrightarrow { C B } - \overrightarrow { C A }
+2 \overrightarrow { C D } - \overrightarrow { C A }
+2 \vec { b } - \vec { a }
+\overrightarrow { A E } = \frac { 1 } { 2 } \overrightarrow { A B }
+\vec { b } - \frac { 1 } { 2 } \vec { a }
+\overrightarrow { C E } = \overrightarrow { A C } + \overrightarrow { A E }
+\vec { a } + \vec { b } - \frac { 1 } { 2 } \vec { a }
+\vec { b } + \frac { 1 } { 2 } \vec { a }
+\overrightarrow { A E } = 2 \overrightarrow { E B }
+\overrightarrow { E C } = \overrightarrow { A C } + \overrightarrow { A E }
+\frac { 4 } { 3 } \vec { b } + \frac { 1 } { 3 } \vec { a }
+\overrightarrow { A E } = \frac { 2 } { 3 } \overrightarrow { A B }
+\overrightarrow { C C } \cdot \overrightarrow { A C } = 0
+\vec { a } \cdot \vec { b } = 0
+C C = A B
+| \vec { a } | = 2 | \vec { b } |
+\overrightarrow { A D } = \overrightarrow { C D } - \overrightarrow { C E }
+\overrightarrow { A _ { 1 } C } = \frac { 1 } { 3 } \overrightarrow { B E }
+\frac { b } { | \vec { a } | }
+\frac { \vec { a } \cdot \vec { b } } { | \vec { a } | | \vec { b } | }
+2 \vec { a } + \vec { b }
+3 k - 3
+2 ( k + 1 )
+C Q = \frac { 1 } { 2 }
+a + b + c
+\frac { 3 } { 2 } \sin C
+\frac { 6 } { \sin C }
+a = \frac { \sqrt { 3 } } { 3 }
+c = \frac { a \sin A C } { \sin C }
+\sin B + \sin C
+\sin ( A + C ) + \sin C
+\sin B - 2 \sin C
+b + c
+a + b ( n + 1 )
+| 2 \vec { a } + 3 \vec { b } | = \sqrt { 1 9 }
+| 2 | \vec { a } | \cdot | b | + | \cos \langle \vec { a } , \vec { b } \rangle
+4 5 ^ { \circ } \pi
+2 \vec { a } + 3 \vec { b }
+1 2 0 + 0 . 8 = 4 1
+4 | \vec { B } | ^ { 2 }
+| 3 \vec { a } - 2 \vec { b } | = \sqrt { 7 }
+\sqrt { ( 3 \vec { a } - 2 \vec { b } ) ^ { 2 } } = \sqrt { 7 }
+3 \vec { a } - 2 \vec { b }
+\cos \theta = \frac { 1 } { 2 }
+\vec { a } \vec { b } = \frac { 1 } { 2 }
+4 a ^ { 2 } + b ^ { 2 } + 2 a b
+2 \vec { a } + 3 \vec { b }
+\mid 2 0 a + b _ { 1 }
+A D = 3 0
+1 8 0 - 0 . 0 1 0 - 0 . 0 5 = 3
+C H = 6 0
+B C \ a n g l e B C
+B C ^ { 2 } = A C
+A B = 9 0
+| \vec { a } | = | \vec { b } |
+2 \sin x = 1
+x = \frac { \sqrt { 6 } } { 6 }
+\vec { a } \cdot \vec { b }
+\sqrt { 3 } \sin x \cos x
+\sin ^ { 2 } x
+\frac { \sqrt { 3 } } { 2 } \sin 2 x
+2 x - \frac { 1 0 0 } { x }
+\vec { b } - \frac { 1 } { 2 } \vec { a }
+- \vec { a } + 2 \vec { b }
+\overrightarrow { C A } + \overrightarrow { A B }
+a + \frac { b } { b } - \frac { 1 } { b } | ^ { 2 }
+\vec { b } + \frac { 1 } { 2 } \vec { a }
+\frac { 1 } { 2 } \overrightarrow { A B } \cdot A E
+\theta = \frac { \pi } { 2 }
+\cos \theta = \theta
+C A = C B
+\frac { 1 } { 3 } \overrightarrow { C A } \cdot \overrightarrow { C A }
+\frac { 1 } { 3 } \overrightarrow { A B } \cdot \overrightarrow { C B }
+C = 0
+\frac { 1 } { 3 } \cdot B C \cdot \frac { 2 } { 3 } \cdot \frac { 3 } { a }
+\overrightarrow { A C } + \overrightarrow { C D }
+\frac { 1 } { 3 } \overrightarrow { A B } \cdot \overrightarrow { C B }
+| \vec { a } | = | \vec { b } |
+\sin ^ { 2 } x
+x = \frac { \pi } { 6 }
+2 \sin ^ { 2 } x
+\cos ^ { 2 } x
+C D = 1
+C D ^ { 2 } = A C ^ { 2 }
+2 A ( A B - O C ) = 2
+\frac { C D } { \sin \ a n g l e C A D }
+\frac { A D } { \sin \ a n g l e A C D }
+\sin \ a n g l e A D C = \frac { 1 } { 2 }
+\ a n g l e A C D = 3 0 ^ { \circ }
+\ a n g l e A C B = \ a n g l e C D O - \ a n g l e C B D = 9 0 ^ { \circ }
+\ a n g l e A D C - \ a n g l e A D D
+\frac { A D } { C D }
+\frac { A C } { \sin 3 0 ^ { \circ } }
+\sin B = \frac { \sqrt { 3 } } { 2 }
+B = \frac { \pi } { 3 }
+\ a n g l e B A C = \frac { \pi } { 3 }
+B C = A E = 3
+3 \vec { a } - 2 \vec { b }
+| \vec { a } | = | \vec { b } | = 1
+\vec { a } \cdot \vec { b }
+2 \vec { a } + \vec { b } ) ^ { 3 }
+| 2 \vec { a } \vec { b }
+\theta = \frac { \pi } { 3 }
+k \vec { a } - \vec { b }
+2 \vec { a } + \vec { b }
+k = - 2
+- 3 k = 6
+3 k - 3
+k _ { 2 } - 1
+| \vec { a } | = \sqrt { 5 }
+| \vec { a } | \cos \theta
+2 \vec { a } + \vec { b }
+2 k + 1
+3 ( k - 1 ) + 3 ( 2 k + 1 ) = 0
+k = 0
+2 \cos A = 1
+\sin C \neq 0
+A = 6 0 ^ { \circ }
+2 \sin C \cos C = \sin C
+\sin ( A + B )
+\sin A \cos B
+\sin B \cos A
+\sin B \cos A
+b - 2 c
+\o p e r a t o r n a m e { c o s } A ^ { 2 } B
+2 \sin C \cos A
+\cos A = \frac { 1 } { 2 }
+\sin A = \frac { \sqrt { 3 } } { 2 }
+A = 6 0 ^ { \circ }
+a = 4 \text { . }
+b ^ { 2 } + c ^ { 2 }
+2 b c \cos A
+b ^ { 2 } + c ^ { 2 }
+2 b c
+2 \vec { a } + \vec { b }
+2 + n
+k - 1
+k \vec { a } - \vec { b }
+3 k - 3
+3 A ^ { 2 } = A B ^ { 2 } + B C ^ { 2 }
+A D = C D
+D C = 1
+x = \frac { \pi } { 3 }
+\cos x = \frac { 1 } { 2 }
+\overrightarrow { A E } = \overrightarrow { B E }
+2 \vec { b } - \vec { a }
+\vec { b } - \frac { 1 } { 2 } \vec { a }
+\vec { b } + \frac { 1 } { 2 } \vec { a }
+A C \perp C B
+\overrightarrow { A _ { 1 } B } + \overrightarrow { C _ { 2 } }
+\frac { 1 } { 2 } \overrightarrow { A C } \cdot \overrightarrow { C B }
+\overrightarrow { A D } = \overrightarrow { A C } + \overrightarrow { C B }
+\overrightarrow { A C } + \frac { 1 } { 2 } \overrightarrow { C B }
+\overrightarrow { A C } \cdot \overrightarrow { B C } = 0
+\overrightarrow { C E } = \overrightarrow { C A }
+\overrightarrow { A D } \cdot \overrightarrow { C E } = 0
+\overrightarrow { A E } = \frac { 1 } { 2 } \overrightarrow { A B }
+\overrightarrow { C A } = \vec { a }
+\overrightarrow { C B } = 2 0
+\overrightarrow { A B } = \overrightarrow { C B } - \overrightarrow { C B }
+3 \vec { a } - 2 \vec { b }
+\cos \theta = \frac { 1 } { 2 }
+\theta = 6 0
+\cos \theta = \frac { 1 } { 2 }
+x = \frac { \pi } { 6 }
+\frac { \sqrt { 3 } } { 2 } \sin 2 x
+\frac { 1 - \cos 2 x } { 2 }
+\sin ^ { 2 } x
+\frac { 1 } { 2 } \cos 2 x
+2 x - \frac { \pi } { 6 }
+4 \sin ^ { 2 } x = 1 .
+\cos ^ { 2 } x + \sin ^ { 2 } x
+\sin ^ { 2 } x + \sin ^ { 2 } x
+| \vec { a } | = | \vec { b } |
+A D = 3 0
+\overrightarrow { A C } = a
+A E = \frac { 1 } { 2 } A B
+A C = C B
+\frac { 2 } { 3 } B C + \frac { \sqrt { 3 } } { 2 } a
+C E = 0
+2 \overrightarrow { C B } - \overrightarrow { C A }
+\overrightarrow { C A } + \overrightarrow { A E }
+2 b - a
+\frac { a } { 2 }
+k \vec { a } - \vec { b }
+2 \vec { a } + \vec { b }
+2 \times \sin B
+1 0 + 6
+- k - 2
+k = 0
+- k - 2
+\cos \theta = - 1
+\vec { a } \cdot \vec { b }
+2 \vec { b } - \vec { a }
+\overrightarrow { C B } - \overrightarrow { C A }
+2 \overrightarrow { C B } - \overrightarrow { C A }
+b _ { 1 } + \frac { \vec { b } } { 2 }
+\vec { b } - \frac { 1 } { 2 } \vec { a } + \vec { a }
+\ a n g l e A = \ a n g l e B
+A B C _ { 1 }
+4 \sin ^ { 2 } x = 1
+\sin x = \frac { 1 } { 2 }
+x = \frac { 1 } { 5 }
+\vec { a } \cdot \vec { b }
+\sin 2 x
+x = 0
+2 x + \frac { 1 } { 2 }
+x = \frac { \pi } { 6 }
+3 \vec { a } - 2 \vec { b }
+\theta = \frac { \pi } { 3 }
+2 \vec { a } + 3 \vec { b }
+\cos \theta = \frac { 1 } { 2 }
+\theta = 6 0
+| \vec { a } | = | \vec { b } | = 1
+3 \vec { a } - 2 \vec { b }
+9 - 1 6 < 1 - m ^ { 2 }
+- a \cos \beta
+( b - 2 c ) \cdot \cos A
+\sin B \cos A
+2 \sin C \cos A
+\sin A \cos B
+2 \sin ^ { 2 } A \cos 1
+\cos A = \frac { 1 } { 2 }
+A = 6 0 ^ { \circ }
+\frac { a } { \sin A }
+\frac { b } { \sin B }
+\frac { c } { \sin C }
+2 R
+a ^ { 2 } = b ^ { 2 } + c ^ { 2 }
+2 b c \cos A
+b + c \geqslant 2 b + c
+b ^ { 2 } + c ^ { 2 } - b ^ { 2 }
+( b + c ) ^ { 2 } - 3 b c
+\frac { 1 } { 6 } + 1 6 < 2 ^ { 2 }
+( b + c ) ^ { 2 } = 4
+b + c = 2
+b + c + c = 2 + 4
+B H
+C A = C B
+A E = 2 \sqrt { 2 }
+C D = 1
+2 C D \cdot A C
+C D ^ { 2 } + A ^ { 2 }
+\frac { \sqrt { 3 } } { 3 } < B
+B C < \frac { \sqrt { 2 } } { 2 }
+C D = 1
+\vec { a } \cdot \vec { b } = - 1
+\cos \theta = \frac { - 1 } { \sqrt { 1 0 } }
+2 \vec { a } + \vec { b }
+4 k = 0
+1 0 k + 2 - k - 2 = 0 .
+- \vec { a } + \vec { b }
+A D _ { C } E
+\overrightarrow { C B } + \overrightarrow { B E }
+C B \perp \overrightarrow { A C }
+\overrightarrow { A D } = \overrightarrow { C A } + \overrightarrow { C A }
+\frac { 5 } { 3 } \cdot \frac { 4 } { 3 a } - \frac { 1 } { 3 }
+- \vec { a } + \vec { b }
+k = 0
+9 k = 0
+3 ( k - 1 )
+2 k + 1
+A C = \sqrt { 3 }
+A D = 1
+\ a n g l e C A D = 3 0 ^ { \circ }
+A D ^ { 2 } + A C ^ { 2 } - C D ^ { 2 }
+2 A D \cdot A C
+2 \sqrt { 3 } \times 2 \sqrt { 3 } = 4 0 \sqrt { 3 } \mathrm { ~ m }
+C D = 1
+A D = C D = 1
+\ a n g l e A C D = 3 0 ^ { \circ }
+\ a n g l e D A C = \ a n g l e D C A D = 3 0 ^ { \circ }
+- \sin C \cdot \cos A
+A C ^ { 2 } + B C ^ { 2 } = A B ^ { 2 }
+D C = 1
+D C = 1
+2 ( c - A ) ^ { 2 }
+\frac { 4 - \left( \frac { 1 } { 2 } - 8 \right) } { 2 5 }
+A C ^ { 2 } + A D ^ { 2 } - C D ^ { 2 }
+3 a ^ { 2 } - 2 b
+a = 1
+C D = 1
+\frac { b ^ { 2 } + c ^ { 2 } - a ^ { 2 } } { 2 b }
+\frac { 3 - 4 \sqrt { 3 } } { 3 }
+a = - 1
+2 a ^ { 2 } = 2
+P C = 2 D
+3 \sin ^ { 2 } x + \sin ^ { 2 } x
+\cos x ^ { 2 } + 7 < - 3
+3 \sin ^ { 2 } x
+\frac { 1 - \cos x } { 2 } - 2
+\frac { 1 0 + \cos 2 x } { 2 }
+2 x = \frac { \pi } { 3 }
+\frac { 1 } { 2 } = \cos 3 0 ^ { \circ }
+2 = \ a n g l e O B C = \ a n g l e A
+1 + \cos 2 \alpha
+3 - 3 - \cos ^ { 2 } x
+\frac { 1 - \cos 2 x } { 2 }
+\sqrt { 3 } \sin x \cos x
+\frac { \sqrt { 3 } } { 2 } \sin 2 x
+\frac { 1 } { 2 } \cos 2 x + \frac { 1 } { 2 }
+3 a - 2 b
+\theta = 6 0
+\frac { 1 } { 2 } \vec { a } + \vec { b }
+C A + A E
+\overrightarrow { C B } = 2 \vec { b }
+\overrightarrow { 2 b } - \vec { a }
+\vec { b } - \frac { 1 } { 2 } \vec { a }
+\widehat { A B } = \widehat _ { A D } - A _ { 1 }
+\frac { 1 } { 2 } \overrightarrow { C B } - \overrightarrow { C B }
+\overrightarrow { C E } + \overrightarrow { C B } = \frac { 1 } { 3 } \overrightarrow { C B }
+\frac { 1 } { 2 } \vec { b } - \vec { a } \cdot \vec { b }
+\overrightarrow { A B } = \overrightarrow { C B } - \overrightarrow { C A }
+\frac { 3 6 - b ^ { 2 } } { 2 5 0 } - \sqrt { 3 0 } \times \frac { 3 } { 1 2 } = - \frac { 1 } { 3 }
+\frac { 1 } { 2 } \overrightarrow { C B } - \overrightarrow { C A }
+\overrightarrow { C B } - \overrightarrow { C A }
+\frac { 4 } { 3 } b \cdot \sin \frac { c } { 2 }
+\cos \ a n g l e D = \frac { \sqrt { 3 } - \sqrt { 3 } } { 1 2 }
+2 \vec { a } + \vec { b }
+k \vec { a } - \vec { b }
+\vec { a } = ( 1 , 2 )
+3 ( 2 , 2 k + 1 )
+k = 0
+k - 1

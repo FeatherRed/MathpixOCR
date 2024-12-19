@@ -43,8 +43,8 @@ class Config(object):
 
         self.seed = 3407
 
-        self.img_dir = "datasets/mini/images"
-        self.pkl_dir = "datasets/mini/pkls"
+        self.img_dir = "datasets/train/images"
+        self.pkl_dir = "datasets/train/pkls"
         self.output_dir = "output/"
 
         # for test

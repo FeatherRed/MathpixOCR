@@ -63,7 +63,7 @@ class Runner(object):
                 self.save_model(self.config.output_dir + "save_model/", epoch)
                 # 验证集验证一波
                 self.eval(eval_dataloader, epoch, tb_logger)
-                self.test(test_dataloader, self.config.output_dir + 'test/', epoch)
+                # self.test(test_dataloader, self.config.output_dir + 'test/', epoch)
                 # todo
                 if epoch >= 50:
                     self.test(test_dataloader, self.config.output_dir + 'test/', epoch)
