@@ -9,7 +9,7 @@ from torch.nn.utils.rnn import pack_padded_sequence
 from utils import *
 from benchmark import *
 from tensorboardX import SummaryWriter
-from model.lstm import model_transformer
+from model.model import model_lstm
 
 def get_parameter_number(model):
     total_num = sum(p.numel() for p in model.parameters())
@@ -26,7 +26,7 @@ class Runner(object):
 
         # if 模型一
 
-        self.model = model_transformer(config, tokenizer)
+        self.model = model_lstm(config, tokenizer)
         self.tokenizer = tokenizer
         self.learning_step = 0
 
