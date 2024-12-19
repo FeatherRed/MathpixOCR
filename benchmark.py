@@ -43,13 +43,14 @@ def exact_match_score(references, hypothesis):
     Exact_Match_Score = Accuracy * 100
     return Exact_Match_Score
 
-def model_complexity(model, x_shape):
+def model_complexity(model, x_shape, prepare_input = None):
     with torch.cuda.device(0):
         macs, params = get_model_complexity_info(
             model.cuda(),
             x_shape,
             as_strings = True,
-            print_per_layer_stat = False
+            print_per_layer_stat = False,
+            input_constructor = prepare_input
         )
         print('{:<30} {:<8}'.format('Computational complexity: ', macs))
         print('{:<30} {:<8}'.format('Number of parameters: ', params))
@@ -95,3 +96,23 @@ def overall_score(references, hypotheses, x_shape):
     model_s = model_complexity_score()
 
     return blue_s, edit_d, exact_s, model_s, (blue_s + edit_d + exact_s + model_s) / 4
+
+def decoder_input(resolution):
+    encoded_image = torch.FloatTensor(1, 64).cuda()
+    encoded_caption = torch.FloatTensor(1, 16, 100).cuda()
+    length = torch.tensor([16]).cuda()
+    return dict(encoder_out = encoded_image, encoded_captions = encoded_caption, caption_lengths = length)
+
+if __name__ == '__main__':
+    from model.nets import Encoder4lstm as Encoder, Decoder_lstm as Decoder
+    model_encoder = Encoder()
+    model_complexity(model_encoder, (3, 64, 64))
+
+    import pickle
+    with open('output/mytest/tokenizer.pkl', 'rb') as f:
+        tokenizer = pickle.load(f)
+    from run import Config
+    config = Config()
+    model_decoder = Decoder(tokenizer, config)
+    model_decoder.cuda()
+    model_complexity(model_decoder, (1, 1, 1, 1), prepare_input = decoder_input)

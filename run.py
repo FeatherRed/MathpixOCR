@@ -20,7 +20,7 @@ class Config(object):
         self.start_epoch = 0
         self.max_epoch = 100
         self.lr_max = 1e-3
-        self.lr_min = 1e-6
+        self.lr_min = 1e-4
         self.lr_decay = pow((self.lr_min / self.lr_max), 1 / self.max_epoch)
 
         self.device = torch.device('cuda:0')
@@ -41,7 +41,7 @@ class Config(object):
         self.max_token_length = 50
         self.max_norm = 1.0
 
-        self.seed = 42
+        self.seed = 3407
 
         self.img_dir = "datasets/mini/images"
         self.pkl_dir = "datasets/mini/pkls"
@@ -55,7 +55,7 @@ class Config(object):
         self.load_path = None # 'output/test_20241128T104341/save_model/'
         self.load_model = None # 'epoch-25.pt'
         self.load_name = None # 'test_20241128T104341
-        self.max_length = 200
+        self.max_length = 260
 
 
 def main():
