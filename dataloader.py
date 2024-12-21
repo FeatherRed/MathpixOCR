@@ -119,6 +119,14 @@ def split_list(data, train_ratio = 0.9, seed = None):
 
     return train_data, valid_data
 
+def cal_memory(all_data):
+    total_memory = 0
+    for data in all_data:
+        total_memory += sys.getsizeof(data['ID'])
+        total_memory += sys.getsizeof(data['label'])
+        total_memory += sys.getsizeof(data['image'])
+    print(f"所占字节大小：{total_memory} B")
+    print(f"{total_memory / 1024 / 1024} MB")
 
 def load_pkl(pkl_dir):
     all_data = []
@@ -131,6 +139,9 @@ def load_pkl(pkl_dir):
             all_data.extend(data)
     T1 = time.perf_counter()
     print(f"读取时间 {T1 - T0} s")
+    # print(f"所占字节大小：{sys.getsizeof(all_data)} B")
+    cal_memory(all_data)
+
     return all_data
 
 
@@ -179,5 +190,5 @@ if __name__ == '__main__':
                                                             valid_batch_size = 1000,
                                                             transform = transform
                                                             )
-    for imgs, refer, length in valid_dataloader:
-        print(refer)
+    # for imgs, refer, length in valid_dataloader:
+    #     print(refer)

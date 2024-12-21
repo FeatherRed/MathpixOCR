@@ -48,14 +48,14 @@ class Runner(object):
             # todo 从dataloader中取东西
             # todo desc中还得加入学习率啥的，这里还没加入
             for bs_img, bs_caption, caption_length in tqdm(dataloader, desc = f"run_name:{self.config.run_name}-epoch[{epoch}/{max_epoch}]"):
-                bs_loss, predicts_string = self.model.train_batch(bs_img, bs_caption, caption_length)
+                bs_loss = self.model.train_batch(bs_img, bs_caption, caption_length)
                 self.learning_step += 1
                 epoch_loss_list.append(bs_loss)
                 self.loss_list.append(bs_loss)
                 if tb_logger is not None and self.learning_step % self.config.log_interval == 0:
-                    acc = exact_match_score(bs_caption, predicts_string) / 100.0
+                    # acc = exact_match_score(bs_caption, predicts_string) / 100.0
                     tb_logger.add_scalar("train/loss", bs_loss, self.learning_step)
-                    tb_logger.add_scalar("train/accuracy", acc, self.learning_step)
+                    # tb_logger.add_scalar("train/accuracy", acc, self.learning_step)
             print(f"Loss of epoch [{epoch}/{max_epoch}] is {np.mean(epoch_loss_list)}, current learning steps:{self.learning_step}")
 
             # todo save model
